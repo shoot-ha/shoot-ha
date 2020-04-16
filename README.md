@@ -12,4 +12,4 @@
 
 
 
-* ![our-wireframe](https://drive.google.com/open?id=1iTsIueAN-kWDU-MYwyJEHV1y6Om-nFpK)
+* [our-wireframe](https://drive.google.com/open?id=1iTsIueAN-kWDU-MYwyJEHV1y6Om-nFpK)
