@@ -1,5 +1,6 @@
-DROP TABLE IF EXISTS teams;
-    CREATE TABLE teams(
+--API 1
+DROP TABLE IF EXISTS teamOne;
+    CREATE TABLE teamOne(
         id SERIAL PRIMARY KEY,
         team VARCHAR(255),
         formed VARCHAR(255),
@@ -14,3 +15,6 @@ DROP TABLE IF EXISTS teams;
         logo VARCHAR(50000),
         clothes VARCHAR(50000)
     )
+
+-- INSERT INTO teams (team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes) 
+-- VALUES ()
