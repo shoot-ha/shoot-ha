@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Search</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <% teamSearch.forEach(result => { %>
+            <section id="section">
+                <img src="<%= result.badge%>">
+                <img src="<%= result.logo %>">
+                <p><%= result.team %></p>
+                <p><%= result.formed%></p>
+                <p><%= result.sport%></p>
+                <p><%= result.league %></p>
+                <p><%= result.stadium%></p>
+                <img src="<%= result.stadiumImg%>">
+                <p><%= result.stadiumLocation%></p>
+                <!-- <a href="<%=result.website%>" target="_blank"><p>Our Website</p></a> -->
+                <p><%= result.teamDescription%></p>
+                <img src="<%= result.clothes%>">
+            </section>
+            <% }) %>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

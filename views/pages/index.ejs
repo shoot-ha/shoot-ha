@@ -10,9 +10,10 @@
 
     </header>
     <main>
-        <% data.forEach(result => { %>
+        <% teams.forEach(result => {%>
             <section>
-                <p><%= result.strTeam%></p>
+                <p><%= result.title%></p>
+                <p><%= result.embedTitle%></p>
             </section>
         <% }) %>
     </main>
