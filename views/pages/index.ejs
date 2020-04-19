@@ -2,16 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shoot-Ha</title>
+    <%- include ('../layout/head') %>
 </head>
 
 <body>
     <header>
-
+    <%- include ('../layout/header') %>
     </header>
     <main>
+        <img src="/img/9.jpg">
+        <div>
+            <p class="main-description">So, please put your canvas element and data visualization API to one side just
+                for a short while.</p>
+        </div>
+
+
+        <!-- slide-show -->
+        <ul id="slides">
+            <li class="slide showing">
+            </li>
+            <li class="slide"></li>
+            <li class="slide"> </li>
+            <li class="slide"></li>
+            <li class="slide"> </li>
+        </ul>
+
         <% teamRender.forEach(result => { %>
         <section id="section">
             <img id="rendImg" src="<%- result.thumbnail %>">
@@ -19,6 +34,34 @@
         </section>
         <% }) %>
     </main>
+
+    <footer>
+        <%- include ('../layout/footer') %>
+
+    </footer>
 </body>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById('myLinks');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+    // for slide-show
+
+    var slides = document.querySelectorAll('#slides .slide');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide, 4000);
+    function nextSlide() {
+        slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].className = 'slide showing';
+    }
+
+
+</script>
 
 </html>
