@@ -199,6 +199,7 @@ const methodOverRide = require('method-override');
 app.use(methodOverRide('_method'));
 
 // app.get('/', databaseResults);
+// app.post('/', databaseResults);
 
 
 //****************************Functions**************************/
@@ -207,23 +208,79 @@ app.use(methodOverRide('_method'));
 //   const SQL = 'SELECT * FROM teamTwo;';
 //   client.query(SQL).then((results) => {
 //     res.render('pages/index', { teams: results.rows });
-//   }).catch((err) => errorHandler(err, req, res));
+//   }).catch((err) =>{
+//     console.log('error');
+//     errorHandler(err, req, res)
+//   });
 // }
+
+// function databaseResults(req, res) {
+//   const { title, teamDescription } = req.body;
+//   const SQL = 'INSERT INTO teamTwo (title, teamDescription) VALUES ($1,$2);';
+//   const value = [title, teamDescription];
+//   client.query(SQL, value).then((results) => {
+//     res.redirect('/');
+//   }).catch((err) => {
+//     console.log('error');
+//     errorHandler(err, req, res)
+//   });
+// }
+//****************************Render Home***************************/
+
+// app.get('/', (req, res) => {
+//   res.render('pages/index');
+// });
 
 // app.post('/', (req, res) => {
 //   superagent.get(`https://www.scorebat.com/video-api/v1/`)
-//     .then(data => {
-//       let resTeam = data.body.map((result) => {
-//         return new Api2(result);
+//     .then(theData => {
+//       let teamRender = theData.map((value) => {
+//         return new Api2(value);
 //       })
-//       res.render('pages/index', { resTeam: resTeam });
+//       res.render('pages/index', { teamRender: teamRender });
 //     }).catch((err) => {
+//       console.log('error');
 //       errorHandler(err, req, res);
 //     });
-//   console.log('The data what we getting from post:', req.body);
 // });
 
-app.get('/search', (req,res)=>{
+
+// res.writeHead(200, {"Content-Type": "application/json"});
+// res.end(JSON.stringify(someObject));
+
+
+app.get('/', (req,res) => {
+  try {
+    // let theTems = [];
+    const teamsDataJson = require('./data/team.json');
+    teamsDataJson.map((data)=>{
+      new Api2(data);
+      // theTems.push(teamJson);
+    })
+    res.render('pages/index', { teamRender: teamsDataJson });
+    res.status(200).json(teamsDataJson);
+  } catch (err) {
+    console.log('error');
+    errorHandler(err, req, res);
+  }
+})
+
+// app.post('/', (req, res) => {
+//   superagent.get(`https://www.scorebat.com/video-api/v1/`)
+//     .then(theData => {
+//       let teamRender = theData.map((value) => {
+//         return new Api2(value);
+//       })
+//       res.render('pages/index', { teamRender: teamRender });
+//     }).catch((err) => {
+//       console.log('error');
+//       errorHandler(err, req, res);
+//     });
+// });
+
+//****************************Search*******************************/
+
+app.get('/search', (req, res) => {
   res.render('pages/searches/search-new');
 });
 
@@ -239,6 +296,25 @@ app.post('/searches/show', (req, res) => {
     });
   console.log('The data what we getting from post:', req.body);
 });
+
+//*****************************Favourite*************************/
+
+// app.get('/add', getForm);
+// app.post('/add', addBook);
+// function getForm(req, res) {
+//   res.render('pages/books/add-book');
+// }
+
+// function addBook(req, res) {
+//   const { author, title, isbn, image_url, description, bookshelf } = req.body;
+//   const SQL = 'INSERT INTO books (author,title,isbn,image_url,description,bookshelf) VALUES ($1,$2,$3,$4,$5,$6);';
+//   const value = [author, title, isbn, image_url, description, bookshelf];
+//   client.query(SQL, value).then((results) => {
+//       res.redirect('/');
+//   }).catch((err) => errorHandler(err, req, res));
+// }
+
+
 
 //*****************************constructor***********************/
 
