@@ -10,10 +10,9 @@
     <%- include ('../layout/header') %>
     </header>
     <main>
-        <img src="/img/9.jpg">
+        <img src="https://images.unsplash.com/photo-1518905332052-b6cfda20ee45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=697&q=80">
         <div>
-            <p class="main-description">So, please put your canvas element and data visualization API to one side just
-                for a short while.</p>
+            <p class="main-description">The site provides you with league tables, video highlights, goal scorers, and other football information.</p>
         </div>
 
 
@@ -30,7 +29,7 @@
         <% teamRender.forEach(result => { %>
         <section id="section">
             <img id="rendImg" src="<%- result.thumbnail %>">
-            <p><%- result.title %></p>
+            <p class="from-render"><%- result.title %></p>
         </section>
         <% }) %>
     </main>
