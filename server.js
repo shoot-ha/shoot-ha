@@ -251,14 +251,11 @@ app.use(methodOverRide('_method'));
 
 app.get('/', (req,res) => {
   try {
-    // let theTems = [];
     const teamsDataJson = require('./data/team.json');
     teamsDataJson.map((data)=>{
       new Api2(data);
-      // theTems.push(teamJson);
     })
     res.render('pages/index', { teamRender: teamsDataJson });
-    res.status(200).json(teamsDataJson);
   } catch (err) {
     console.log('error');
     errorHandler(err, req, res);
@@ -338,6 +335,7 @@ function Api1(name) {
 function Api2(value) {
   this.title = value.title;
   this.embedTitle = value.videos.title;
+  this.embedVideo = value.videos.embed;
   this.embed = value.embed;
   this.thumbnail = value.thumbnail;
   this.resultName1 = value.side1.name;
