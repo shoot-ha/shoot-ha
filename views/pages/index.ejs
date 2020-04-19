@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shoot-Ha</title>
 </head>
+
 <body>
     <header>
 
     </header>
     <main>
-        <% teams.forEach(result => {%>
-            <section>
-                <p><%= result.title%></p>
-                <p><%= result.embedTitle%></p>
-            </section>
+        <% teamRender.forEach(result => { %>
+        <section id="section">
+            <img src="<%- result.thumbnail %>">
+            <p><%- result.title %></p>
+            <p><%- result.embedTitle %></p>
+            <p><%- result.embed %></p>
+            <!-- <%- result.embedVideo %>
+            <%- result.embedTitle %>
+            <p><%- result.totalResults1 %></p>
+            <p><%- result.totalResults2 %></p>
+            <p><%- result.resultName1 %></p> -->
+        </section>
         <% }) %>
     </main>
 </body>
+
 </html>
