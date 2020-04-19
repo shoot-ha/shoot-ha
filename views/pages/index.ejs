@@ -14,15 +14,8 @@
     <main>
         <% teamRender.forEach(result => { %>
         <section id="section">
-            <img src="<%- result.thumbnail %>">
+            <img id="rendImg" src="<%- result.thumbnail %>">
             <p><%- result.title %></p>
-            <p><%- result.embedTitle %></p>
-            <p><%- result.embed %></p>
-            <!-- <%- result.embedVideo %>
-            <%- result.embedTitle %>
-            <p><%- result.totalResults1 %></p>
-            <p><%- result.totalResults2 %></p>
-            <p><%- result.resultName1 %></p> -->
         </section>
         <% }) %>
     </main>
