@@ -50,6 +50,7 @@ app.post('/searches/show', (req, res) => {
     });
   console.log('The data what we getting from post:', req.body);
 });
+
 //**************************Favourite************************ */
 
 app.get('/favourite', getDataFromDB);
@@ -81,24 +82,42 @@ function saveToDB(req, res) {
       res.redirect(`/favourite/${resultRows}`);
     })
 }
-///////////////////////////////////
+
+//***************************Details***************************** */
 
 function detailsFun(req, res) {
   let saveId = [req.params.ID];
-  // console.log(saveId);
   let sql = `SELECT * FROM teamOne WHERE id = $1;`
-  // let SQL2 = 'SELECT DISTINCT bookshelf FROM teamOne;'
-  // let arrOfBookSh=[];
-  // client.query(SQL2)
-  // .then(result=>{
-  //   arrOfBookSh=result.rows;
-  // })
   return client.query(sql, saveId)
     .then(result => {
-      res.render('./pages/searches/details', { data: result.rows[0]}) //, arrOfBookSh : arrOfBookSh
+      res.render('./pages/searches/details', { data: result.rows[0]})
     })
 }
-///////////////////////////////
+
+//**************************Update******************************* */
+app.put('/update/:team_id', updateTeam);
+app.delete('/delete/:team_id', deleteTeam);
+
+function updateTeam(req, res) {
+  const { team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes } = req.body;
+  const SQL =
+        'UPDATE teamOne SET team=$1,formed=$2,sport=$3,league=$4,stadium=$5,stadiumImg=$6,stadiumLocation=$7,website=$8,teamDescription=$9,badge=$10,logo=$11,clothes=$12 WHERE id=$13';
+  const values = [team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes,req.params.team_id];
+  client
+    .query(SQL, values)
+    .then((results) => res.redirect(`/favourite/${req.params.team_id}`))
+    .catch((err) => errorHandler(err, req, res));
+}
+//****************************Delet**************************** */
+function deleteTeam(req, res) {
+  const SQL = 'DELETE FROM teamOne WHERE id=$1';
+  const values = [req.params.team_id];
+  client
+    .query(SQL, values)
+    .then((results) => res.redirect('/favourite'))
+    .catch((err) => errorHandler(err, req, res));
+}
+
 //*****************************Constructors***********************/
 
 function Api1(name) {
