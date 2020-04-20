@@ -3,36 +3,43 @@
 
 <head>
     <%- include ('../layout/head') %>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/svg/861/861512.svg" />
 </head>
 
 <body>
     <header>
-    <%- include ('../layout/header') %>
+        <%- include ('../layout/header') %>
     </header>
-    <main>
-        <img src="/img/9.jpg">
+    <main id="showMain">
+        <h1 class="esraa">hello</h1>
+        <!-- <img src="https://images.unsplash.com/photo-1518905332052-b6cfda20ee45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=697&q=80">
         <div>
-            <p class="main-description">So, please put your canvas element and data visualization API to one side just
-                for a short while.</p>
-        </div>
+            <p class="main-description">The site provides you with league tables, video highlights, goal scorers, and other football information.</p>
+        </div> -->
 
 
         <!-- slide-show -->
-        <ul id="slides">
+        <!-- <ul id="slides">
             <li class="slide showing">
             </li>
             <li class="slide"></li>
             <li class="slide"> </li>
             <li class="slide"></li>
             <li class="slide"> </li>
-        </ul>
-
+        </ul> -->
         <% teamRender.forEach(result => { %>
-        <section id="section">
-            <img id="rendImg" src="<%- result.thumbnail %>">
-            <p><%- result.title %></p>
-        </section>
+        <!-- <div id="container"> -->
+
+
+        <img src="<%- result.thumbnail %>">
+        <p class="from-render"><%- result.title %></p>
+        <button value="<%= result.id %>">Show Details</button>
+        <section class="<%= result.id %>" style="width: 100%;display: none;"><%- result.embed %></section>
         <% }) %>
+
+
+
+        <!-- </div> -->
     </main>
 
     <footer>
@@ -40,7 +47,8 @@
 
     </footer>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
 <script>
     function myFunction() {
         var x = document.getElementById('myLinks');
@@ -61,6 +69,13 @@
         slides[currentSlide].className = 'slide showing';
     }
 
+    $(document).ready(function () {
+        $("button").click(function () {
+            let $class = $(this).attr('value');
+            console.log($class);
+            $(`.${$class}`).toggle();
+        });
+    })
 
 </script>
 

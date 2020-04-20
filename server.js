@@ -185,17 +185,19 @@
 
 'use strict';
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const pg = require('pg');
 const PORT = process.env.PORT || 4000;
 const app = express();
 const superagent = require('superagent');
+const client = new pg.Client(process.env.DATABASE_URL);
+const methodOverRide = require('method-override');
+app.use(cors());
 app.use('/public', express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
-const client = new pg.Client(process.env.DATABASE_URL);
-const methodOverRide = require('method-override');
 app.use(methodOverRide('_method'));
 
 // app.get('/', databaseResults);
@@ -225,7 +227,7 @@ app.use(methodOverRide('_method'));
 //     errorHandler(err, req, res)
 //   });
 // }
-//****************************Render Home***************************/
+// ****************************Render Home***************************/
 
 // app.get('/', (req, res) => {
 //   res.render('pages/index');
@@ -249,10 +251,10 @@ app.use(methodOverRide('_method'));
 // res.end(JSON.stringify(someObject));
 
 
-app.get('/', (req,res) => {
+app.get('/', (req, res) => {
   try {
     const teamsDataJson = require('./data/team.json');
-    teamsDataJson.map((data)=>{
+    teamsDataJson.map((data) => {
       new Api2(data);
     })
     res.render('pages/index', { teamRender: teamsDataJson });
@@ -310,10 +312,100 @@ app.post('/searches/show', (req, res) => {
 //       res.redirect('/');
 //   }).catch((err) => errorHandler(err, req, res));
 // }
+//**************************Try Something***************************** */
 
 
+// app.get('/', getInfo)
+// var idForImg = document.getElementById('rendImg');
+// var chosenOne = [];
+// idForImg.addEventListener('click', getInfo);
+// function getInfo(event, req,res) {
+//   for (var x = 0 ; x < Api1.allTeams.length ; x++ ) {
+//     if (event.target.id === `${Api1.allTeams[x].thumbnail}`) {
+//       if (!chosenOne.includes(Api1.allTeams[x])) {
+//         chosenOne.push(Api1.allTeams[x]);
+//         res.render('pages/searches/show-search', { teamSearch: Api1.allTeams[x] });
+//       }
+//     }
+//   }
+// }
 
-//*****************************constructor***********************/
+//*****************************Just Idea************************ */
+// app.post('/', saveToDB);
+// function saveToDB(req, res) {
+//   let ln;
+//   let title2 = req.body.embedTitle;
+//   let { title,embedTitle,thumbnail,resultName1,resultUrl1,resultName2,resultUrl2,totalResults1,totalResults2,embedVideo } = req.body;
+//   let SQL = 'INSERT INTO teamTwo (title,embedTitle,thumbnail,resultName1,resultUrl1,resultName2,resultUrl2,totalResults1,totalResults2,embedVideo) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10);';
+//   let safeValues = [title,embedTitle,thumbnail,resultName1,resultUrl1,resultName2,resultUrl2,totalResults1,totalResults2,embedVideo];
+//   let safetitle = [title2];
+//   const SQL2 = 'SELECT * FROM teamTwo WHERE title =$1;';
+//   client.query(SQL, safeValues)
+//     .then(() => {
+//     })
+//   return client.query(SQL2, safetitle)
+//     .then(result => {
+//       ln = result.rows[0].id;
+//       res.redirect(`/team/${ln}`);
+//     }).catch((err) => {
+//       console.log('error');
+//       errorHandler(err, req, res);
+//     });
+// }
+// app.get('team', getDataFromDB);
+// function getDataFromDB(req, res) {
+//   const SQL = 'SELECT * FROM books;';
+//   return client.query(SQL)
+//     .then(result => {
+//       res.render('./pages/index', { data: result.rows })
+//     })
+// }
+// app.get('/de',readJson);
+// const readJson = () => {
+//   $.ajax('./data/team.json').then(data => {
+//     data.forEach(items => {
+//       let theData = new Api2(items);
+//       theData.render('pages/teams/detail',{ teamRender: theData });
+//     });
+//   })
+// };
+
+// app.get('/team', (req, res) => {
+//   res.render('pages/teams/detail');
+// });
+// app.get('/team/:id', detailsFun);
+// function detailsFun(req, res) {
+//   const SQL = 'SELECT * FROM teamTwo WHERE id=$1;';
+//   const value = [req.params.id];
+//   client.query(SQL, value).then((result) => {
+//     res.render('pages/teams/detail', { theTeam: result.rows[0] });
+//   }).catch((err) => {
+//     console.log('error');
+//     errorHandler(err, req, res);
+//   });
+// }
+////////////////////////////////////////
+// app.get('/team/:id', (req, res) => {
+//   try {
+//     // let arrIdTeam = [];
+//     const teamsDataJson = require('./data/team.json');
+//     teamsDataJson.map((data) => {
+//       new Api2(data);
+//       // let idTeam = data.id;
+//       // arrIdTeam.push(idTeam);
+//     })
+//     // const value = [req.params.id];
+//     // client.query(teamsDataJson,value).then((result) => {
+//     res.render('pages/teams/detail', { teamRender: teamsDataJson });
+//     // res.render('pages/teams/detail', { teamRender: value });
+//     // })
+//   } catch (err) {
+//     console.log('error');
+//     errorHandler(err, req, res);
+//   }
+// })
+
+//*****************************Constructors***********************/
 
 function Api1(name) {
   this.team = name.strTeam;
@@ -328,14 +420,11 @@ function Api1(name) {
   this.badge = name.strTeamBadge;
   this.logo = name.strTeamLogo;
   this.clothes = name.strTeamJersey;
-  // allTeams.push(this);
 }
-// allTeams = [];
 
 function Api2(value) {
   this.title = value.title;
   this.embedTitle = value.videos.title;
-  this.embedVideo = value.videos.embed;
   this.embed = value.embed;
   this.thumbnail = value.thumbnail;
   this.resultName1 = value.side1.name;
@@ -344,9 +433,12 @@ function Api2(value) {
   this.resultUrl2 = value.side2.url;
   this.totalResults1 = value.competition.name;
   this.totalResults2 = value.competition.url;
+  this.id = value.id;
+  // Api1.allTeams.push(this);
 }
+// Api1.allTeams = [];
 
-/////////////////////////////////////////////////////
+//*************************************************************/
 
 function errorHandler(err, req, res) {
   res.status(500).render('pages/error', { error: err });
