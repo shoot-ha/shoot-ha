@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+
+<body>
+    <section id="section">
+        <img src="<%= data.badge%>">
+        <img src="<%= data.logo %>">
+        <p><%= data.team %></p>
+        <p><%= data.formed%></p>
+        <p><%= data.sport%></p>
+        <p><%= data.league %></p>
+        <p><%= data.stadium%></p>
+        <img src="<%= data.stadiumImg%>">
+        <p><%= data.stadiumLocation%></p>
+        <a href="http://<%=data.website%>" target="_blank"> <%= data.team %> Website </a>
+        <p><%= data.teamDescription%></p>
+        <img src="<%= data.clothes%>">
+    </section>
+
+
+    <!-- <form action="/update/<%= data.id%>?_method=put" method="post" class="form-container"></form> -->
+    <form action="/update/<%= data.id%>?_method=put" method="post" class="form-container">
+        <input type="text" name="team" value="<%= data.team%>" />
+                <input type="text" name="formed" value="<%= data.formed%>" />
+                <input type="text" name="sport" value="<%= data.sport%>" />
+                <input type="text" name="league" value="<%= data.league %>">
+                <input type="text" name="staduim" value="<%= data.staduim%>" />
+                <input type="text" name="staduimImg" value="<%= data.staduimImg%>" style="display: none;" />
+                <input type="text" name="staduimLocation" value="<%= data.staduimLocation%>" />
+                <input type="text" name="website" value="<%= data.website%>" />
+                <input type="text" name="teamDescription" value="<%= data.teamDescription%>" />
+                <input type="text" name="badge" value="<%= data.badge%>" style="display: none;" />
+                <input type="text" name="logo" value="<%= data.logo%>" style="display: none;" />
+                <input type="text" name="clothes" value="<%= data.clothes%>" style="display: none;" />
+
+        <button type="submit">UPDATE THIS TEAM</button>
+    </form>
+    <form action="/delete/<%=data.id%>?_method=DELETE" method="post">
+        <button>DELETE THIS TEAM</button></form>
+</body>
+
+</html>

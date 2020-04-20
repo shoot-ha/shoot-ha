@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+
+<body>
+    <main>
+        <% teamRender.forEach(result => { %>
+        <section id="<%=result.id%>">
+            <img src="<%- result.thumbnail %>">
+            <p><%- result.title %></p>
+            <p><%- result.embed %></p>
+        </section>
+        <% }) %>
+    </main>
+    <!-- <script>
+        let $oneTeam = $('img');
+        $oneTeam.on('click', function () {
+            let $theTeam = $(this).val();
+            $('section').hide();
+            $(`.${$theTeam}`).show();
+        });
+    </script> -->
+</body>
+
+</html>

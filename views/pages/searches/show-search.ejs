@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results Search</title>
+    <link rel="shortcut icon" href="https://www.flaticon.com/premium-icon/icons/svg/2706/2706805.svg" />
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <% teamSearch.forEach(result => { %>
+        <section id="section">
+            <img src="<%= result.badge%>">
+            <img src="<%= result.logo %>">
+            <p><%= result.team %></p>
+            <p><%= result.formed%></p>
+            <p><%= result.sport%></p>
+            <p><%= result.league %></p>
+            <p><%= result.stadium%></p>
+            <img src="<%= result.stadiumImg%>">
+            <p><%= result.stadiumLocation%></p>
+            <a href="http://<%=result.website%>" target="_blank"> <%= result.team %> Website </a>
+            <p><%= result.teamDescription%></p>
+            <img src="<%= result.clothes%>">
+
+
+
+            <!------------------------------- form section ------------------------>
+            <form action="/favourite" method="POST" id="team-form" class="form-container">
+                <input type="text" name="team" value="<%= result.team%>" />
+                <input type="text" name="formed" value="<%= result.formed%>" />
+                <input type="text" name="sport" value="<%= result.sport%>" />
+                <input type="text" name="league" value="<%= result.league %>">
+                <input type="text" name="staduim" value="<%= result.staduim%>" />
+                <input type="text" name="staduimImg" value="<%= result.staduimImg%>" style="display: none;" />
+                <input type="text" name="staduimLocation" value="<%= result.staduimLocation%>" />
+                <input type="text" name="website" value="<%= result.website%>" />
+                <input type="text" name="teamDescription" value="<%= result.teamDescription%>" />
+                <input type="text" name="badge" value="<%= result.badge%>" style="display: none;" />
+                <input type="text" name="logo" value="<%= result.logo%>" style="display: none;" />
+                <input type="text" name="clothes" value="<%= result.clothes%>" style="display: none;" />
+                <!-- <button type="submit"> Add to Database </button> -->
+                <button type="submit"> Add To Favourite </button>
+        </section>
+        </form>
+
+
+        <% }) %>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
