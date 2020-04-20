@@ -11,35 +11,29 @@
         <%- include ('../layout/header') %>
     </header>
     <main id="showMain">
-        <h1 class="esraa">hello</h1>
-        <!-- <img src="https://images.unsplash.com/photo-1518905332052-b6cfda20ee45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=697&q=80">
+        <img src="https://images.unsplash.com/photo-1518905332052-b6cfda20ee45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=697&q=80">
         <div>
             <p class="main-description">The site provides you with league tables, video highlights, goal scorers, and other football information.</p>
-        </div> -->
+        </div>
 
 
         <!-- slide-show -->
-        <!-- <ul id="slides">
+        <ul id="slides">
             <li class="slide showing">
             </li>
             <li class="slide"></li>
             <li class="slide"> </li>
             <li class="slide"></li>
             <li class="slide"> </li>
-        </ul> -->
+        </ul>
         <% teamRender.forEach(result => { %>
-        <!-- <div id="container"> -->
-
-
-        <img src="<%- result.thumbnail %>">
+        <div id="container">
+        <img src="<%- result.thumbnail %>" class="rendered-img">
         <p class="from-render"><%- result.title %></p>
-        <button value="<%= result.id %>">Show Details</button>
-        <section class="<%= result.id %>" style="width: 100%;display: none;"><%- result.embed %></section>
+        <button value="<%= result.id %>" id="home-button">Show Details</button>
+        <section class="<%= result.id %>" style="display: none;"><%- result.embed %></section>
         <% }) %>
-
-
-
-        <!-- </div> -->
+        </div>
     </main>
 
     <footer>
