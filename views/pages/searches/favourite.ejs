@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favourite</title>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <% result.forEach(resultD => { %>
+            <section id="section">
+                <img src="<%= resultD.badge%>">
+                <img src="<%= resultD.logo %>">
+                <p><%= resultD.team %></p>
+                <p><%= resultD.formed%></p>
+                <p><%= resultD.sport%></p>
+                <p><%= resultD.league %></p>
+                <p><%= resultD.stadium%></p>
+                <img src="<%= resultD.stadiumImg%>">
+                <p><%= resultD.stadiumLocation%></p>
+                <a href="http://<%=resultD.website%>" target="_blank"> <%= resultD.team %> Website </a>
+                <p><%= resultD.teamDescription%></p>
+                <img src="<%= resultD.clothes%>">
+                <a href="/favourite/<%=resultD.id%>"><button class="view-button"> View Details </button></a>
+            </section>
+            <% }) %>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../layout/head') %>
+    <link rel="shortcut icon" href="https://image.flaticon.com/icons/svg/861/861512.svg" />
+</head>
+
+<body>
+    <header>
+        <%- include ('../layout/header') %>
+    </header>
+    <main id="showMain">
+        <img src="https://images.unsplash.com/photo-1518905332052-b6cfda20ee45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=697&q=80">
+        <div>
+            <p class="main-description">The site provides you with league tables, video highlights, goal scorers, and other football information.</p>
+        </div>
+
+
+        <!-- slide-show -->
+        <ul id="slides">
+            <li class="slide showing">
+            </li>
+            <li class="slide"></li>
+            <li class="slide"> </li>
+            <li class="slide"></li>
+            <li class="slide"> </li>
+        </ul>
+        <% teamRender.forEach(result => { %>
+        <div id="container">
+        <img src="<%- result.thumbnail %>" class="rendered-img">
+        <p class="from-render"><%- result.title %></p>
+        <button value="<%= result.id %>" id="home-button">Show Details</button>
+        <section class="<%= result.id %>" style="display: none;"><%- result.embed %></section>
+        <% }) %>
+        </div>
+    </main>
+
+    <footer>
+        <%- include ('../layout/footer') %>
+
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+<script>
+    function myFunction() {
+        var x = document.getElementById('myLinks');
+        if (x.style.display === 'block') {
+            x.style.display = 'none';
+        } else {
+            x.style.display = 'block';
+        }
+    }
+    // for slide-show
+
+    var slides = document.querySelectorAll('#slides .slide');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide, 4000);
+    function nextSlide() {
+        slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].className = 'slide showing';
+    }
+
+    $(document).ready(function () {
+        $("button").click(function () {
+            let $class = $(this).attr('value');
+            console.log($class);
+            $(`.${$class}`).toggle();
+        });
+    })
+
+</script>
+
+</html>
