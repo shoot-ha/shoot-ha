@@ -15,6 +15,3 @@ DROP TABLE IF EXISTS teamOne;
         logo VARCHAR(50000),
         clothes VARCHAR(50000)
     )
-
--- INSERT INTO teams (team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes) 
--- VALUES ()
