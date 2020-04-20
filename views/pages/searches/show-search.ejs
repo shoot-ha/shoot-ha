@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results Search</title>
+    <link rel="shortcut icon" href="https://www.flaticon.com/premium-icon/icons/svg/2706/2706805.svg" />
 </head>
 <body>
     <header>
@@ -21,7 +22,7 @@
                 <p><%= result.stadium%></p>
                 <img src="<%= result.stadiumImg%>">
                 <p><%= result.stadiumLocation%></p>
-                <a href="http://<%=result.website%>" target="_blank">Website Team</a>
+                <a href="http://<%=result.website%>" target="_blank"> <%= result.team %> Website </a>
                 <p><%= result.teamDescription%></p>
                 <img src="<%= result.clothes%>">
             </section>
