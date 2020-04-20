@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New</title>
+    
+</head>
+<body>
+    
+    <header>
+      <h1>Details</h1>
+    </header>
+    <main id="indexMain">
+        <div class="container">
+            <section id="my-section">
+                <img src="<%= theteam.image_url %>">
+                <h3><%= theteam.team%></h3>
+                <h4><%= theteam.formed %></h4>
+                <p><%= theteam.sport %></p>
+                <p><%= theteam.league %></p>
+                <p><%= theteam.staduim %></p>
+                <p><%= theteam.staduimImg %></p>
+                <p><%= theteam.staduimLocation %></p>
+                <p><%= theteam.website %></p>
+                <p><%= theteam.teamDescription %></p>
+                <p><%= theteam.badge %></p>
+                <p><%= theteam.logo %></p>
+                <p><%= theteam.clothes %></p>
+                
+            </section>
+        <button class="two-button hide_btn"> Update Details </button>
+        <div id="update">
+            <form action="/update/<%= theteam.id%>?_method=put" method="post"   class="form-container"  >      
+                <input type="text" name="team" value="<%= theteam.team%>" />
+                <input type="text" name="formed"  value="<%= theteam.formed%>"/>
+                <input type="text" name="sport" value="<%= theteam.sport%>" />
+                <input type="text" name="league" value="<%= theteam.league %>" > 
+                <input type="text" name="staduim" value="<%= theteam.staduim%>" />
+                <input type="text" name="staduimImg" value="<%= theteam.staduimImg%>" />
+                <input type="text" name="staduimLocation" value="<%= theteam.staduimLocation%>" />
+                <input type="text" name="website" value="<%= theteam.website%>" />
+                <input type="text" name="teamDescription" value="<%= theteam.teamDescription%>" />
+                <input type="text" name="badge" value="<%= theteam.badge%>" />
+                <input type="text" name="logo" value="<%= theteam.logo%>" />
+                <input type="text" name="clothes" value="<%= theteam.clothes%>" />
+
+                </form>
+        </div>
+        <form action="/delete/<%= theteam.id%>?_method=delete" method="POST">
+          <button class="two-button del-button"> Delete Team</button>
+        </form>    
+      </div>
+    </main>
+    
+</body>
+</html>

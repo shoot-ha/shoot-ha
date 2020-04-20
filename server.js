@@ -202,6 +202,15 @@ app.use(methodOverRide('_method'));
 // app.post('/', databaseResults);
 
 
+
+
+
+
+// app.get('/', getDataFromDB);
+// app.get('/addTeam',getDataFromDB);
+// app.get('/show-search/:teamID', detailsFun);
+// app.post('/addTeam', saveToDB);
+
 //****************************Functions**************************/
 
 // function databaseResults(req, res) {
@@ -262,18 +271,18 @@ app.get('/', (req,res) => {
   }
 })
 
-// app.post('/', (req, res) => {
-//   superagent.get(`https://www.scorebat.com/video-api/v1/`)
-//     .then(theData => {
-//       let teamRender = theData.map((value) => {
-//         return new Api2(value);
-//       })
-//       res.render('pages/index', { teamRender: teamRender });
-//     }).catch((err) => {
-//       console.log('error');
-//       errorHandler(err, req, res);
-//     });
-// });
+app.post('/', (req, res) => {
+  superagent.get(`https://www.scorebat.com/video-api/v1/`)
+    .then(theData => {
+      let teamRender = theData.map((value) => {
+        return new Api2(value);
+      })
+      res.render('pages/index', { teamRender: teamRender });
+    }).catch((err) => {
+      console.log('error');
+      errorHandler(err, req, res);
+    });
+});
 
 //****************************Search*******************************/
 
@@ -313,9 +322,36 @@ app.post('/searches/show', (req, res) => {
 
 
 
+
+function saveToDB(req, res) {
+  let ln;
+  let title2 = req.body.team;
+  let { team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes} = req.body;
+  // console.log(req.body);
+  let SQL = 'INSERT INTO teamone (team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12);';
+  let safeValues = [team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes];
+  let safetitle =[title2];
+  const SQL2 = 'SELECT * FROM teamone WHERE team =$1;';
+  client.query(SQL, safeValues)
+    .then(() => {
+    })
+  return client.query(SQL2,safetitle)
+    .then(result => {
+      // console.log(result.rows[0].id);
+      ln=result.rows[0].id;
+      res.redirect(`/addTeam/${ln}`);
+    })
+    .catch((err) => {
+      errorHandler(err, req, res);
+    });
+}
+
+
+
 //*****************************constructor***********************/
 
 function Api1(name) {
+  // this.id = name.idTeam
   this.team = name.strTeam;
   this.formed = name.intFormedYear;
   this.sport = name.strSport;
@@ -348,6 +384,235 @@ function Api2(value) {
 
 /////////////////////////////////////////////////////
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function detailsFun(req, res) {
+  let saveId = [req.params.teamID];
+  // console.log(saveId);
+  let sql = 'SELECT * FROM teamone WHERE id = $1;'
+  // let SQL2 = 'SELECT DISTINCT bookshelf FROM books;'
+  // let arrOfTeamsSh=[];
+  // client.query(SQL2)
+  //   .then(result=>{
+  //     arrOfTeamsSh=result.rows;
+  //   })
+  return client.query(sql, saveId)
+    .then(result => {
+      res.render('pages/searches/show-search', { teamSearch: result.rows[0]}) //arrOfBookSh : arrOfSh })
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+// app.delete('/delete/:deleted_team',deletBook);
+// function deletBook(req,res){
+//   let idParam = req.params.deleted_team;
+//   let saveID = [idParam];
+//   let sql = 'DELETE FROM teamone WHERE id=$1;';
+//   return client.query(sql,saveID)
+//     .then(()=>{
+//       res.redirect('/favourite');
+//     })
+// }
+
+
+
+
+
+
+
+
+
+function getDataFromDB(req, res) {
+  const SQL = 'SELECT * FROM teamone;';
+  return client.query(SQL)
+    .then(result => {
+      res.render('pages/searches/favourite', { theteam: result.rows })
+    })
+}
+
+
+
+
+// app.put('/update/:update_team', newUpdate);
+// function newUpdate (req , res){
+//   //collect
+//   let { team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes} = req.body;
+//   //update
+//   let SQL = 'UPDATE teamone set team=$1,formed=$2,sport=$3,league=$4,stadium=$5,stadiumImg=$6,stadiumLocation=$7,website=$8,teamDescription=$9,badge=$10,logo=$11,clothes=$12 ;';
+//   //safevalues
+//   let idParam = req.params.update_team;
+//   let safeValues = [team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes,idParam];
+//   client.query(SQL,safeValues)
+//     .then(()=>{
+//       res.redirect(`/show-detail/${idParam}`);
+//     })
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+
+// // app.post('/addTeam' , addedToDb)
+
+
+// function addedToDb(req,res){
+
+
+//   res.status(200).send('/addTeam')
+
+//   // will go the insertation of DATABASE .
+//   let {team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes} =req.body;
+//   let SQL = `INSERT INTO teamone (team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) ;`;
+//   let values = [team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes];
+//   return client.query(SQL ,values)
+//     .then( (res) => {
+//       res.redirect('/pages/searches/favourite');
+
+//       //res.redirect(/favourtes)
+//     })
+// }
+// // app.post('/pages/searches/favourite',process)
+
+// function process(req,res){
+//   let id = req.params.allteams_id;
+//   let SQL =`SELECT * FROM teamone WHERE id=$1`;
+//   let values = [id];
+//   client.query(SQL ,values)
+//     .then ( data =>{
+//       res.render( 'pages/searches/favourite' , { teamSearch : data.rows[0]})
+//     })
+
+//   //res.render pages/seareches/favourite
+// }
+
+
+// app.put('/update/:book_id', updateBook)// function 7
+// app.delete('/delete/:the_book' , deleteBook) // function 8
+
+
+// // function 3
+// function getAllTeams(req ,res){
+//   let SQL = `SELECT * FROM teamone ;`;
+//   return client.query(SQL)
+//     .then( result => {
+//       console.log(result.rows);
+      
+//       res.render('pages/searches/show-search' , {theteam : result.rows});
+      
+//     })
+// }
+
+// // function 4
+// function addTeam(req , res){
+//   res.render('pages/searches/favourite');
+// }
+
+// // function 5
+// function processTeam (req ,res){
+//   let {team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes} =req.body;
+//   let SQL = `INSERT INTO teamone (team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12) ;`;
+//   let values = [team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes];
+//   return client.query(SQL ,values)
+//     .then( () => {
+//       res.redirect('/pages/searches/search-detail');
+//     })
+// }
+
+// // function 6
+// function addTeamById( req ,res){
+//   // from database books_id_seq
+//   let id = req.params.allteams_id;
+//   let SQL =`SELECT * FROM teamone WHERE id=$1`;
+//   let values = [id];
+//   client.query(SQL ,values)
+//     .then ( data =>{
+//       res.render( 'pages/searches/favourite' , { teamSearch : data.rows[0]})
+//     })
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+
 function errorHandler(err, req, res) {
   res.status(500).render('pages/error', { error: err });
 }
@@ -359,3 +624,4 @@ app.use('*', (request, response) => {
 client.connect().then(() => {
   app.listen(PORT, () => console.log(`My server is up and running on ${PORT}`));
 });
+

@@ -1,6 +1,6 @@
 --API 1
-DROP TABLE IF EXISTS teamOne;
-    CREATE TABLE teamOne(
+DROP TABLE IF EXISTS teamone;
+    CREATE TABLE teamone(
         id SERIAL PRIMARY KEY,
         team VARCHAR(255),
         formed VARCHAR(255),

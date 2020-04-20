@@ -25,10 +25,51 @@
                 <p><%= result.teamDescription%></p>
                 <img src="<%= result.clothes%>">
             </section>
+
+
+            <button class="open-button hide_btn">Select This Book</button>
+            <!------------------------------- form section ------------------------>
+
+            <form action="/addTeam" method="POST" id="team-form" class="form-container">      
+                <input type="text" name="team" value="<%= result.team%>" />
+                <input type="text" name="formed"  value="<%= result.formed%>"/>
+                <input type="text" name="sport" value="<%= result.sport%>" />
+                <input type="text" name="league" value="<%= result.league %>" > 
+                <input type="text" name="staduim" value="<%= result.staduim%>" />
+                <input type="text" name="staduimImg" value="<%= result.staduimImg%>" style="display: none;"/>
+                <input type="text" name="staduimLocation" value="<%= result.staduimLocation%>" />
+                <input type="text" name="website" value="<%= result.website%>" />
+                <input type="text" name="teamDescription" value="<%= result.teamDescription%>" />
+                <input type="text" name="badge" value="<%= result.badge%>" style="display: none;"/>
+                <input type="text" name="logo" value="<%= result.logo%>" style="display: none;" />
+                <input type="text" name="clothes" value="<%= result.clothes%>" style="display: none;"/>
+                <button type="submit"> Add to Database </button>
+                
+              </form>
+
+
+
+
+            </div>
+
+
             <% }) %>
     </main>
     <footer>
 
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+      <script>
+
+
+  $(document).ready(function(){
+  $('.form-container').hide();
+  $('.hide_btn').on('click', function(){
+    $('.form-container').toggle();
+  })
+})
+
+    </script>
 </body>
 </html>
