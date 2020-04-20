@@ -28,6 +28,8 @@
     z-index:3;
     width: -webkit-fill-available;
     height: 190px;
+    margin-top: 8px;
+
 
   }
   
@@ -40,12 +42,13 @@
   }
   
   .form-wrapper input {
-        border:0;
-        padding:5px;
-        outline:none;
-        width: 284px;
-        margin-top: 30px;
-        color: grey;
+    border: 0;
+    padding: 5px;
+    outline: none;
+    width: inherit;
+    margin-top: 30px;
+    color: grey;
+    left: 1;
 
 
   }
@@ -66,17 +69,16 @@
   }
   
   .form-wrapper button {
-    background-color:#d83c3c;
-    padding:5px;
+    background-color: #d83c3c;
+    padding: 5px;
     text-transform: uppercase;
-    border:0;
-    color:rgba(255,255,255,.7);
-    font-family:Calibri;
-    margin-left: 100px;
+    border: 0;
+    color: rgba(255,255,255,.7);
+    font-family: Calibri;
+    margin-left: 133px;
     padding: 8px;
-    border-radius: 12%;
+    border-radius: 16%;
     color: floralwhite;
-
   }
   
   .form-wrapper button:hover {
@@ -87,9 +89,13 @@
     font-family: monospace;
     font-size: x-large;
     color: lightgrey;
+    text-align: center;
+    background: #3e3e3ecf;
+    padding: 10px;
+    font-weight: bolder;
   }
   #imgs {
-    width: 83.33333%;
+    width: 100%;
     float: left;
     clear: both;
     height: 42%;
@@ -111,19 +117,20 @@
   
   #background {
     z-index:1;
-    width:100%;
+    width: 100%;
     height:100%;
     position:absolute;
     background-repeat: no-repeat;
   }
   
   #search {
-    top:50%;
+    top: 50%;
     position: absolute;
-    display:block;
-    z-index:3;
-    width: -webkit-fill-available;
+    display: block;
+    z-index: 3;
+    width: 63%;
     height: 190px;
+    margin-left: 20%;
 
   }
   
@@ -136,12 +143,13 @@
   }
   
   .form-wrapper input {
-        border:0;
-        padding:5px;
-        outline:none;
-        width: 284px;
-        margin-top: 30px;
-        color: grey;
+    border: 0;
+    padding: 5px;
+    outline: none;
+    width: 340px;
+    margin-top: 30px;
+    color: grey;
+    margin-left: 100px;
 
 
   }
@@ -162,16 +170,17 @@
   }
   
   .form-wrapper button {
-    background-color:#d83c3c;
-    padding:5px;
+    background-color: #d83c3c;
+    padding: 5px;
     text-transform: uppercase;
-    border:0;
-    color:rgba(255,255,255,.7);
-    font-family:Calibri;
+    border: 0;
+    color: rgba(255,255,255,.7);
+    font-family: Calibri;
     margin-left: 100px;
     padding: 8px;
     border-radius: 12%;
     color: floralwhite;
+    margin-left: 215px;
 
   }
   
@@ -185,7 +194,7 @@
     color: lightgrey;
   }
   #imgs {
-    width: 83.33333%;
+    width: 100%;
     float: left;
     clear: both;
     height: 42%;
