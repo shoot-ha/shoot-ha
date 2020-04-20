@@ -203,7 +203,9 @@ app.use(methodOverRide('_method'));
 // app.get('/', databaseResults);
 // app.post('/', databaseResults);
 
-
+app.get('/about-us', (req, res) => {
+  res.render('pages/about-us');
+});
 //****************************Functions**************************/
 
 // function databaseResults(req, res) {
