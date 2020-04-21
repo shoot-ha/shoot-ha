@@ -28,6 +28,19 @@
     .clothes{
         float: right;
     }
+    .badgeF{
+        width: 200px;
+    }
+    .sectionF{
+        /* width: 400px; */
+        text-align: center;
+    }
+    #divF{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
 }
 
 @media (min-width:769px){
@@ -58,4 +71,66 @@
     .clothes{
         float: right;
     }
+    .badgeF{
+        width: 200px;
+    }
+    .sectionF{
+    width: 270px;
+    border-radius: 1%;
+    text-align: center;
+    background-color: #9ED086;
+    color: white;
+    padding: 1%;
+    margin: 1%;
+    background-image: url('https://image.flaticon.com/icons/svg/2793/2793131.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500px 143px;
+    background-position-y: bottom;
+    height: 416px;
+    }
+    .sectionF:hover{
+        background-image: url('https://image.flaticon.com/icons/svg/2784/2784491.svg');
+    }
+    #divF{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .teamF{
+        font-size: 150%;
+    }
+    #saveP{
+        font-size: 200%;
+        height: 150%;
+    }
+    .view-button{
+        cursor: pointer;
+    color: rgba(255, 255, 255);
+    width: 64%;
+    padding: 6%;
+    margin-top: 15%;
+    font-size: 130%;
+    background-color: rgba(8, 14, 8, 0.493);
+    font-weight: bolder;
+    }
+    .view-button:hover{
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        width: 80%;
+        padding: 2% 2% 2% 2%;
+        font-size: 180%;
+        background-color: rgba(8, 14, 8, 0.493);
+    }
+    /* .hide_btn{
+
+    } */
+    #body{
+        background-image: url('../images/hiclipart.com.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: -5px;
+    }
 }
+

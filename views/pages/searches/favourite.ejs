@@ -5,74 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favourite</title>
+    <link rel="stylesheet" href="../../../public/styles/icons.css">
 </head>
 
 <body>
     <header>
     </header>
     <main>
-        <p> Saved in Favourite: <%= result.length %> </p>
-
-        <% result.forEach(resultD => { %>
-            <section id="section">
-                <img src="<%= resultD.badge%>">
-                <img src="<%= resultD.logo %>">
-                <p><%= resultD.team %></p>
-                <p><%= resultD.formed%></p>
-                <p><%= resultD.sport%></p>
-                <p><%= resultD.league %></p>
-                <p><%= resultD.stadium%></p>
-                <img src="<%= resultD.stadiumImg%>">
-                <p><%= resultD.stadiumLocation%></p>
-                <a href="http://<%=resultD.website%>" target="_blank"> <%= resultD.team %> Website </a>
-                <p><%= resultD.description%></p>
-                <img src="<%= resultD.clothes%>">
+        <p id="saveP"> Saved in Favourite: <%= result.length %> </p>
+        <div id="divF">
+            <% result.forEach(resultD => { %>
+            <section class="sectionF">
+                <img class="badgeF" src="<%= resultD.badge%>">
+                <img style="display: none;" src="<%= resultD.logo %>">
+                <p class="teamF"><%= resultD.team %></p>
+                <p style="display: none;"><%= resultD.formed%></p>
+                <p style="display: none;"><%= resultD.sport%></p>
+                <p style="display: none;"><%= resultD.league %></p>
+                <p style="display: none;"><%= resultD.stadium%></p>
+                <img style="display: none;" src="<%= resultD.stadiumImg%>">
+                <p style="display: none;"><%= resultD.stadiumLocation%></p>
+                <a style="display: none;" href="http://<%=resultD.website%>" target="_blank"> <%= resultD.team %>
+                    Website </a>
+                <p style="display: none;"><%= resultD.description%></p>
+                <img style="display: none;" src="<%= resultD.clothes%>">
                 <a href="/favourite/<%=resultD.id%>"><button class="view-button"> View Details </button></a>
             </section>
             <% }) %>
+        </div>
+        <!-- ******************************Add New Team***************************** -->
 
-            <!-- ******************************Add New Team***************************** -->
+        <form action="/favourite" method="POST" class="form-container">
+            <!-- <label for="team">Team Name: </label> -->
+            <input type="text" name="team" placeholder="Team Name" class="info" required /><br>
 
-            <form action="/favourite" method="POST" class="form-container">
-                <!-- <label for="team">Team Name: </label> -->
-                <input type="text" name="team" placeholder="Team Name" class="info" required /><br>
-    
-                <!-- <label for="formed">Formed Year: </label> -->
-                <input type="text" name="formed" placeholder="Formed Year" class="info" required /><br>
-    
-                <!-- <label for="sport">Sport Type: </label> -->
-                <input type="text" name="sport" placeholder="Sport Type" class="info" /><br>
-    
-                <!-- <label for="league">League: </label> -->
-                <input type="text" name="league" placeholder="League" class="info" /><br>
-    
-                <!-- <label for="staduim">Stadium: </label> -->
-                <input type="text" name="staduim" placeholder="Stadium" class="info" /><br>
-    
-                <!-- <label for="staduimImg">Stadium Picture: </label> -->
-                <textarea name="staduimImg" placeholder="Stadium Picture" class="info" ></textarea><br>
-    
-                <!-- <label for="staduimLocation">Location: </label> -->
-                <input type="text" name="staduimLocation" placeholder="Staduim Location" class="info" /><br>
-    
-                <!-- <label for="website"> Website: </label> -->
-                <textarea name="website" placeholder="Website (URL)" class="info" ></textarea><br>
-    
-                <!-- <label for="teamDescription">Team Description: </label> -->
-                <textarea name="description" placeholder="Team Description" class="info" ></textarea><br>
-    
-                <!-- <label for="badge">Badge: </label> -->
-                <textarea name="badge" placeholder="Badge (Image)" class="info" ></textarea><br>
-    
-                <!-- <label for="logo">Logo: </label> -->
-                <textarea name="logo" placeholder="Logo (Image)" class="info" ></textarea><br>
-    
-                <!-- <label for="clothes">Clothes Image: </label> -->
-                <textarea name="clothes" placeholder="Clothes Image" class="info" ></textarea><br>
-    
-                <button type="submit">Submit</button>
-            </form>
-            <button type="submit" class="hide_btn">Add Team</button>
+            <!-- <label for="formed">Formed Year: </label> -->
+            <input type="text" name="formed" placeholder="Formed Year" class="info" required /><br>
+
+            <!-- <label for="sport">Sport Type: </label> -->
+            <input type="text" name="sport" placeholder="Sport Type" class="info" /><br>
+
+            <!-- <label for="league">League: </label> -->
+            <input type="text" name="league" placeholder="League" class="info" /><br>
+
+            <!-- <label for="staduim">Stadium: </label> -->
+            <input type="text" name="staduim" placeholder="Stadium" class="info" /><br>
+
+            <!-- <label for="staduimImg">Stadium Picture: </label> -->
+            <textarea name="staduimImg" placeholder="Stadium Picture" class="info"></textarea><br>
+
+            <!-- <label for="staduimLocation">Location: </label> -->
+            <input type="text" name="staduimLocation" placeholder="Staduim Location" class="info" /><br>
+
+            <!-- <label for="website"> Website: </label> -->
+            <textarea name="website" placeholder="Website (URL)" class="info"></textarea><br>
+
+            <!-- <label for="teamDescription">Team Description: </label> -->
+            <textarea name="description" placeholder="Team Description" class="info"></textarea><br>
+
+            <!-- <label for="badge">Badge: </label> -->
+            <textarea name="badge" placeholder="Badge (Image)" class="info"></textarea><br>
+
+            <!-- <label for="logo">Logo: </label> -->
+            <textarea name="logo" placeholder="Logo (Image)" class="info"></textarea><br>
+
+            <!-- <label for="clothes">Clothes Image: </label> -->
+            <textarea name="clothes" placeholder="Clothes Image" class="info"></textarea><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        <button type="submit" class="hide_btn">Add Team</button>
     </main>
     <footer>
     </footer>
