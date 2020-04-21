@@ -1,4 +1,61 @@
-/* @media (min-width: 320px){}
-@media (min-width:769px){} */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 
+@media (min-width: 320px){
+    main{
+        font-family: 'Fjalla One', sans-serif;
+    }
+    .logo{
+        width: 50px;
+        float: left;
+    }
+    .badge{
+        width: 150px;
+        float: left;
+    }
+    .clothes{
+        width: 200px;
+    }
+    /* .name{
+        float: left;
+    } */
+    #divInfo{
+        width: 400px;
+        text-align: center;
+    }
+    .website{
+        text-decoration: none;
+    }
+    .clothes{
+        float: right;
+    }
+}
 
+@media (min-width:769px){
+    main{
+        font-family: 'Fjalla One', sans-serif;
+    }
+    .logo{
+        width: 100px;
+        float: left;
+    }
+    .badge{
+        width: 300px;
+        float: left;
+    }
+    .clothes{
+        width: 300px;
+    }
+    /* .name{
+        float: left;
+    } */
+    #divInfo{
+        width: 400px;
+        text-align: center;
+    }
+    .website{
+        text-decoration: none;
+    }
+    .clothes{
+        float: right;
+    }
+}

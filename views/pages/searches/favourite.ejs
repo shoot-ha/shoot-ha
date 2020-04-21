@@ -25,14 +25,78 @@
                 <img src="<%= resultD.stadiumImg%>">
                 <p><%= resultD.stadiumLocation%></p>
                 <a href="http://<%=resultD.website%>" target="_blank"> <%= resultD.team %> Website </a>
-                <p><%= resultD.teamDescription%></p>
+                <p><%= resultD.description%></p>
                 <img src="<%= resultD.clothes%>">
                 <a href="/favourite/<%=resultD.id%>"><button class="view-button"> View Details </button></a>
             </section>
             <% }) %>
+
+            <!-- ******************************Add New Team***************************** -->
+
+            <form action="/favourite" method="POST" class="form-container">
+                <!-- <label for="team">Team Name: </label> -->
+                <input type="text" name="team" placeholder="Team Name" class="info" required /><br>
+    
+                <!-- <label for="formed">Formed Year: </label> -->
+                <input type="text" name="formed" placeholder="Formed Year" class="info" required /><br>
+    
+                <!-- <label for="sport">Sport Type: </label> -->
+                <input type="text" name="sport" placeholder="Sport Type" class="info" /><br>
+    
+                <!-- <label for="league">League: </label> -->
+                <input type="text" name="league" placeholder="League" class="info" /><br>
+    
+                <!-- <label for="staduim">Stadium: </label> -->
+                <input type="text" name="staduim" placeholder="Stadium" class="info" /><br>
+    
+                <!-- <label for="staduimImg">Stadium Picture: </label> -->
+                <textarea name="staduimImg" placeholder="Stadium Picture" class="info" ></textarea><br>
+    
+                <!-- <label for="staduimLocation">Location: </label> -->
+                <input type="text" name="staduimLocation" placeholder="Staduim Location" class="info" /><br>
+    
+                <!-- <label for="website"> Website: </label> -->
+                <textarea name="website" placeholder="Website (URL)" class="info" ></textarea><br>
+    
+                <!-- <label for="teamDescription">Team Description: </label> -->
+                <textarea name="description" placeholder="Team Description" class="info" ></textarea><br>
+    
+                <!-- <label for="badge">Badge: </label> -->
+                <textarea name="badge" placeholder="Badge (Image)" class="info" ></textarea><br>
+    
+                <!-- <label for="logo">Logo: </label> -->
+                <textarea name="logo" placeholder="Logo (Image)" class="info" ></textarea><br>
+    
+                <!-- <label for="clothes">Clothes Image: </label> -->
+                <textarea name="clothes" placeholder="Clothes Image" class="info" ></textarea><br>
+    
+                <button type="submit">Submit</button>
+            </form>
+            <button type="submit" class="hide_btn">Add Team</button>
     </main>
     <footer>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        // Hampurger Minue
+        function myFunction() {
+            var x = document.getElementById('myLinks');
+            if (x.style.display === 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+        // Toggle Form
+        $(document).ready(function () {
+            $('.form-container').hide();
+            $('.hide_btn').on('click', function () {
+                $('.form-container').toggle();
+            });
+        });
+
+    </script>
 </body>
 
 </html>

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <%- include ('../../layout/head') %>
     <link rel="shortcut icon" href="https://www.flaticon.com/premium-icon/icons/svg/1950/1950004.svg" />
     <title>Details Team</title>
     <link rel="stylesheet" href="../../../public/styles/icons.css">
@@ -10,26 +9,30 @@
 
 <body>
     <header>
-        <%- include ('../../layout/header') %>
     </header>
     <main>
         <section id="section">
-            <img src="<%= data.badge%>">
-            <img src="<%= data.logo %>">
-            <p><%= data.team %></p>
-            <p><%= data.formed%></p>
-            <p><%= data.sport%></p>
-            <p><%= data.league %></p>
-            <p><%= data.stadium%></p>
-            <img src="<%= data.stadiumImg%>">
-            <p><%= data.stadiumLocation%></p>
-            <a href="http://<%=data.website%>" target="_blank"> <%= data.team %> Website </a>
-            <p><%= data.teamDescription%></p>
-            <img src="<%= data.clothes%>">
+            
+            <img class="badge" src="<%= data.badge%>">
+            <img class="clothes" src="<%= data.clothes%>">
+            <div id="divInfo">
+                <div>
+                    <img class="logo" src="<%= data.logo %>">
+                    <p class="name"><%= data.team %></p>
+                </div>
+                <p class="formed"><%= data.formed%></p>
+                <p class="sport"><%= data.sport%></p>
+                <p class="league"><%= data.league %></p>
+                <p class="stadium"><%= data.stadium%></p>
+                <p class="stadiumLocation"><%= data.stadiumLocation%></p>
+                <p><a class="website" href="http://<%=data.website%>" target="_blank"> <%= data.team %> Website </a></p>
+                <p class="description"><%= data.description%></p>
+            </div>
+            <img class="stadiumImg" src="<%= data.stadiumImg%>">
         </section>
 
 
-        <!-- <form action="/update/<%= data.id%>?_method=put" method="post" class="form-container"></form> -->
+
         <form action="/update/<%= data.id%>?_method=put" method="post" class="form-container">
             <label for="team">Team Name: </label>
             <input type="text" name="team" value="<%= data.team%>" class="info" /><br>
@@ -55,8 +58,8 @@
             <label for="website"><%= data.team%> Website: </label>
             <input type="text" name="website" value="<%= data.website%>" class="info" /><br>
 
-            <label for="teamDescription">Team Description: </label>
-            <input type="text" name="teamDescription" value="<%= data.teamDescription%>" class="info" /><br>
+            <label for="description">Team Description: </label>
+            <textarea name="description" class="info" ><%= data.description%></textarea><br>
 
             <label for="badge">Badge: </label>
             <input type="text" name="badge" value="<%= data.badge%>" class="info" /><br>
@@ -75,7 +78,6 @@
 
     </main>
     <footer>
-        <%- include ('../../layout/footer') %>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
