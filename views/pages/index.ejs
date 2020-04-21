@@ -7,14 +7,18 @@
 </head>
 
 <body>
-    <header>
+    <header style="background-image: url(../../public/img/new.jpg);background-repeat: no-repeat;background-size: cover;">
         <%- include ('../layout/header') %>
     </header>
     <main id="showMain">
-        <img src="https://images.unsplash.com/photo-1518905332052-b6cfda20ee45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=697&q=80">
-        <div>
-            <p class="main-description">The site provides you with league tables, video highlights, goal scorers, and other football information.</p>
+        <div class="container-p">
+            <h4 class="ml15">
+                <span class="word">shoot-</span>
+                <span class="word">ha</span>
+              </h4>
+              <p class="ml16 main-description top-left">The site provides you with video highlights, and other football team information.</p>
         </div>
+        
 
 
         <!-- slide-show -->
@@ -72,5 +76,31 @@
     })
 
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script>
+    anime.timeline({loop: false})
+  .add({
+    targets: '.ml15 .word',
+    scale: [14,1],
+    opacity: [0,1],
+    easing: "easeOutCirc",
+    duration: 800,
+    delay: (el, i) => 800 * i
+  });
 
+</script>
+<script>
+    // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml16');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml16 .letter',
+    translateY: [-100,0],
+    easing: "easeOutExpo",
+    duration: 2000,
+    delay: (el, i) => 30 * i
+  });
+</script>
 </html>
