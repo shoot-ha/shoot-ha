@@ -90,8 +90,26 @@ function detailsFun(req, res) {
   let sql = `SELECT * FROM teamOne WHERE id = $1;`
   return client.query(sql, saveId)
     .then(result => {
-      res.render('./pages/searches/details', { data: result.rows[0]})
+      res.render('pages/searches/details', { data: result.rows[0]})
     })
+}
+
+//**************************Add New******************************* */
+
+app.get('/add/team', getForm);
+app.post('/add/team', addTeam);
+
+function getForm(req, res) {
+  res.render('pages/teams/add-new');
+}
+
+function addTeam(req, res) {
+  const { team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes } = req.body;
+  const SQL = 'INSERT INTO teamOne (team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12);';
+  const value = [team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes];
+  client.query(SQL, value).then((results) => {
+    res.redirect('/favourite');
+  }).catch((err) => errorHandler(err, req, res));
 }
 
 //**************************Update******************************* */

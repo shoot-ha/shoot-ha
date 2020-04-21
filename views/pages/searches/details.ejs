@@ -2,47 +2,102 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details</title>
+    <%- include ('../../layout/head') %>
+    <link rel="shortcut icon" href="https://www.flaticon.com/premium-icon/icons/svg/1950/1950004.svg" />
+    <title>Details Team</title>
+    <link rel="stylesheet" href="../../../public/styles/icons.css">
 </head>
 
 <body>
-    <section id="section">
-        <img src="<%= data.badge%>">
-        <img src="<%= data.logo %>">
-        <p><%= data.team %></p>
-        <p><%= data.formed%></p>
-        <p><%= data.sport%></p>
-        <p><%= data.league %></p>
-        <p><%= data.stadium%></p>
-        <img src="<%= data.stadiumImg%>">
-        <p><%= data.stadiumLocation%></p>
-        <a href="http://<%=data.website%>" target="_blank"> <%= data.team %> Website </a>
-        <p><%= data.teamDescription%></p>
-        <img src="<%= data.clothes%>">
-    </section>
+    <header>
+        <%- include ('../../layout/header') %>
+    </header>
+    <main>
+        <section id="section">
+            <img src="<%= data.badge%>">
+            <img src="<%= data.logo %>">
+            <p><%= data.team %></p>
+            <p><%= data.formed%></p>
+            <p><%= data.sport%></p>
+            <p><%= data.league %></p>
+            <p><%= data.stadium%></p>
+            <img src="<%= data.stadiumImg%>">
+            <p><%= data.stadiumLocation%></p>
+            <a href="http://<%=data.website%>" target="_blank"> <%= data.team %> Website </a>
+            <p><%= data.teamDescription%></p>
+            <img src="<%= data.clothes%>">
+        </section>
 
 
-    <!-- <form action="/update/<%= data.id%>?_method=put" method="post" class="form-container"></form> -->
-    <form action="/update/<%= data.id%>?_method=put" method="post" class="form-container">
-        <input type="text" name="team" value="<%= data.team%>" />
-                <input type="text" name="formed" value="<%= data.formed%>" />
-                <input type="text" name="sport" value="<%= data.sport%>" />
-                <input type="text" name="league" value="<%= data.league %>">
-                <input type="text" name="staduim" value="<%= data.staduim%>" />
-                <input type="text" name="staduimImg" value="<%= data.staduimImg%>" style="display: none;" />
-                <input type="text" name="staduimLocation" value="<%= data.staduimLocation%>" />
-                <input type="text" name="website" value="<%= data.website%>" />
-                <input type="text" name="teamDescription" value="<%= data.teamDescription%>" />
-                <input type="text" name="badge" value="<%= data.badge%>" style="display: none;" />
-                <input type="text" name="logo" value="<%= data.logo%>" style="display: none;" />
-                <input type="text" name="clothes" value="<%= data.clothes%>" style="display: none;" />
+        <!-- <form action="/update/<%= data.id%>?_method=put" method="post" class="form-container"></form> -->
+        <form action="/update/<%= data.id%>?_method=put" method="post" class="form-container">
+            <label for="team">Team Name: </label>
+            <input type="text" name="team" value="<%= data.team%>" class="info" /><br>
 
-        <button type="submit">UPDATE THIS TEAM</button>
-    </form>
-    <form action="/delete/<%=data.id%>?_method=DELETE" method="post">
-        <button>DELETE THIS TEAM</button></form>
+            <label for="formed">Formed Year: </label>
+            <input type="text" name="formed" value="<%= data.formed%>" class="info" /><br>
+
+            <label for="sport">Sport Type: </label>
+            <input type="text" name="sport" value="<%= data.sport%>" class="info" /><br>
+
+            <label for="league">League: </label>
+            <input type="text" name="league" value="<%= data.league %>" class="info" /><br>
+
+            <label for="staduim">Stadium: </label>
+            <input type="text" name="staduim" value="<%= data.staduim%>" class="info" /><br>
+
+            <label for="staduimImg">Stadium Picture: </label>
+            <input type="text" name="staduimImg" value="<%= data.staduimImg%>" class="info" /><br>
+
+            <label for="staduimLocation">Location: </label>
+            <input type="text" name="staduimLocation" value="<%= data.staduimLocation%>" class="info" /><br>
+
+            <label for="website"><%= data.team%> Website: </label>
+            <input type="text" name="website" value="<%= data.website%>" class="info" /><br>
+
+            <label for="teamDescription">Team Description: </label>
+            <input type="text" name="teamDescription" value="<%= data.teamDescription%>" class="info" /><br>
+
+            <label for="badge">Badge: </label>
+            <input type="text" name="badge" value="<%= data.badge%>" class="info" /><br>
+
+            <label for="logo">Logo: </label>
+            <input type="text" name="logo" value="<%= data.logo%>" class="info" /><br>
+
+            <!-- <label for="clothes"></label> -->
+            <input type="text" name="clothes" value="<%= data.clothes%>" class="info" style="display: none;" /><br>
+
+            <button type="submit">SAVE</button>
+        </form>
+        <button type="submit" class="hide_btn">UPDATE THIS TEAM</button>
+        <form action="/delete/<%=data.id%>?_method=DELETE" method="post">
+            <button>DELETE THIS TEAM</button></form>
+
+    </main>
+    <footer>
+        <%- include ('../../layout/footer') %>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        // Hampurger Minue
+        function myFunction() {
+            var x = document.getElementById('myLinks');
+            if (x.style.display === 'block') {
+                x.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+            }
+        }
+        // Toggle Form
+        $(document).ready(function () {
+            $('.form-container').hide();
+            $('.hide_btn').on('click', function () {
+                $('.form-container').toggle();
+            });
+        });
+
+    </script>
 </body>
 
 </html>
