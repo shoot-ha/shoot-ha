@@ -1,0 +1,303 @@
+
+/*
+
+body {
+    width: 100%;
+    margin: auto;
+    background-image: url(../img/DSC_93.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    font-family: inherit;
+    color: #2c323a;
+  }
+  main {
+    height: 1500px;
+  }
+  .flip-box {
+    background-color: transparent;
+    width: 30%;
+    height: 367px;
+    perspective: 1000px;
+    margin-left: 13%;
+    margin-top: 2%;
+    float: left;
+  }
+
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+  .flip-box-back {
+    background-color:#b4c1d094;
+
+    color: #2c323a;
+    transform: rotateY(180deg);
+    border-radius: 30%;
+  }
+
+  h2#name {
+    margin-top: 12%;
+    font-size: 250%;
+  }
+  p#description {
+    margin-top: 7%;
+    font-size: 130%;
+    line-height: 125%;
+  }
+  
+  img#potos {
+    border-radius: 30%;
+  }
+  .content-p {
+    font-size: 1.5em;
+    text-align: justify;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    border-bottom: solid #2c323a;
+
+    padding-bottom: 5%;
+    text-align: center;
+    font-family: monospace;
+
+  }
+  h3 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    margin-top: 5%;
+  }
+  */
+
+  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Indie+Flower&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Comic+Neue:ital@1&family=Girassol&family=Indie+Flower&family=Lobster&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Comic+Neue:ital,wght@1,400;1,700&family=Girassol&family=Indie+Flower&family=Lobster&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Comic+Neue:ital,wght@1,400;1,700&family=Girassol&family=Indie+Flower&family=Lobster&family=Peralta&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Comic+Neue:ital,wght@1,400;1,700&family=Girassol&family=Indie+Flower&family=Lobster&family=New+Rocker&family=Peralta&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Comic+Neue:ital,wght@1,400;1,700&family=Condiment&family=Girassol&family=Indie+Flower&family=Lobster&family=New+Rocker&family=Peralta&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Comic+Neue:ital,wght@1,400;1,700&family=Condiment&family=Girassol&family=Indie+Flower&family=Lobster&family=Mystery+Quest&family=New+Rocker&family=Peralta&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Comic+Neue:ital,wght@1,400;1,700&family=Condiment&family=Girassol&family=Indie+Flower&family=Kavoon&family=Lobster&family=Mystery+Quest&family=New+Rocker&family=Peralta&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Comic+Neue:ital,wght@1,400;1,700&family=Condiment&family=Girassol&family=Indie+Flower&family=Kavoon&family=Lakki+Reddy&family=Lobster&family=Mystery+Quest&family=New+Rocker&family=Peralta&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Racing+Sans+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lora&family=Mukta:wght@300&display=swap');
+
+
+
+
+  @media (min-width:320px){
+  
+
+    body {
+        width: 100%;
+        margin: auto;
+        background-image: url(../img/DSC_93.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        font-family: inherit;
+        color: #2c323a;
+        
+      }
+      main {
+        height: 2200px;
+      }
+      .flip-box {
+        background-color: transparent;
+        width: 75%;
+        height: 400px;
+        perspective: 1000px;
+        margin-left:7%;
+        margin-top: 5%;
+        float: left;
+        /* margin-bottom: -33%; */
+
+  }
+    
+      .flip-box-inner {
+        position: relative;
+        width: 115%;
+        height: 60%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+    
+      .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+      }
+    
+      .flip-box-front,
+    .flip-box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+      .flip-box-back {
+        background-color:#b4c1d094;
+    
+        color: #2c323a;
+        transform: rotateY(180deg);
+        border-radius: 30%;
+      }
+    
+      h2#name {
+        margin-top: 3%;
+    font-size: 160%;
+      }
+      p#description {
+        margin-top: -3%;
+        font-size: 103%;
+        line-height: 100%;
+      }
+      
+      img#potos {
+        border-radius: 30%;
+      }
+      .content-p {
+        font-size: 1.5em;
+        text-align: justify;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+        border-bottom: solid #2c323a;
+    
+        padding-bottom: 5%;
+        text-align: center;
+        font-family: monospace;
+    
+      }
+      h3 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 5%;
+        margin-left: 3%;
+        margin-top: 5%;
+      }
+
+
+}
+
+
+@media (min-width:769px){
+
+
+
+    body {
+        width: 100%;
+        margin: auto;
+        background-image: url(../img/DSC_93.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        font-family: inherit;
+        color: #2c323a;
+      }
+      main {
+        height: 1500px;
+      }
+      .flip-box {
+        background-color: transparent;
+        width: 30%;
+        height: 367px;
+        perspective: 1000px;
+        margin-left: 13%;
+        margin-top: 2%;
+        float: left;
+      }
+    
+      .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+    
+      .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+      }
+    
+      .flip-box-front,
+    .flip-box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+      .flip-box-back {
+        background-color:#b4c1d094;
+    
+        color: #2c323a;
+        transform: rotateY(180deg);
+        border-radius: 30%;
+      }
+    
+      h2#name {
+        margin-top: 12%;
+        font-size: 250%;
+      }
+      p#description {
+        margin-top: 7%;
+        font-size: 130%;
+        line-height: 125%;
+      }
+      
+      img#potos {
+        border-radius: 30%;
+        margin: 0 auto;
+      }
+      .content-p {
+        font-size: 1.5em;
+        text-align: justify;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+        border-bottom: solid #2c323a;
+    
+        padding-bottom: 5%;
+        text-align: center;
+        font-family: monospace;
+    
+      }
+      h3 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 5%;
+        margin-left: 3%;
+        margin-top: 5%;
+      }
+
+
+
+}

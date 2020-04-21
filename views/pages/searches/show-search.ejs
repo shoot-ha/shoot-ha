@@ -6,29 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results Search</title>
     <link rel="shortcut icon" href="https://www.flaticon.com/premium-icon/icons/svg/2706/2706805.svg" />
+   
+    
     <link rel="stylesheet" href="/public/styles/theme.css">
+
 </head>
 
 <body>
     <header>
-
-    </header>
+        <%- include ('../../layout/header') %>   
+     </header>
     <main>
         <% teamSearch.forEach(result => { %>
 
             <section id="section">
                 <img id="badge" src="<%= result.badge%>">
                 <img id="logo" src="<%= result.logo %>">
-                <p id="team"><%= result.team %></p>
-                <p id="formed"><%= result.formed%></p>
-                <p id="sport"><%= result.sport%></p>
-                <p id="league"><%= result.league %></p>
-                <p id="stadium"><%= result.stadium%></p>
+                <p id="info"><%= result.team %></p>
+                <p id="info"><%= result.formed%></p>
+                <p id="info"><%= result.sport%></p>
+                <p id="info"><%= result.league %></p>
+                <p id="info"><%= result.stadium%></p>
                 <img id="staImg" src="<%= result.stadiumImg%>">
-                <p id="staLocation"><%= result.stadiumLocation%></p>
+                <p id="info"><%= result.stadiumLocation%></p>
                 <a id="website" href="http://<%=result.website%>" target="_blank"> <%= result.team %> Website </a>
                 <p id="description"><%= result.description%></p>
                 <img id="clothes"src="<%= result.clothes%>">
+            
             
 
 
@@ -56,7 +60,7 @@
 
     </main>
     <footer>
-
+        <%- include ('../../layout/footer') %>
     </footer>
 </body>
 

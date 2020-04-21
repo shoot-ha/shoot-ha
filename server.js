@@ -16,7 +16,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.use(methodOverRide('_method'));
-
+app.get('/about-us', (req,res) =>{
+  res.render('pages/about-us') ;
+} );
 //************************Render Home******************************/
 
 app.get('/', (req, res) => {
