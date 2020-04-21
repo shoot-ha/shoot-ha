@@ -1,31 +1,104 @@
-img#badge {
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bangers|Crete+Round&display=swap');
+
+/* img#badge {
     width: 25%;
     float: right;
     padding: 54px 124px 0px 0px;
     margin-top: 59px;
 
+} */
+
+img#badge {
+    width: 25%;
+    float: right;
+    padding: 54px 65px 0px 0px;
+    margin: 28px 0px 0px 0px;
+    cursor: pointer;
 }
 
-img#logo {
+
+
+/* img#logo {
     margin: 29px 13px 15px 0px;
+} */
+img#logo {
+    width: 25%;
+    margin: 29px 13px 15px 0px;
+    cursor: pointer;
 }
+
+
 section#section {
     text-align: center;
     background-color: #a5b78096;
     margin-bottom: 33px;
     padding-bottom: 20px;
+    /* background-image: url(https://targetcareers.co.uk/sites/targetcareers.co.uk/files/public/styles/header_1500x550/public/field/image/football.jpg?itok=O1dRVOeD); */
+    /* background-repeat: no-repeat; */
+    background: cover;
+    /* width: 100%; */
+    /* background-size: cover; */
+    background: rgb(173,228,66);
+    background: linear-gradient(45deg, rgba(173,228,66,1) 5%, rgba(219,226,194,1) 40%, rgba(206,214,165,1) 62%, rgba(173,242,91,1) 95%);
 }
-p#description {
+/* p#description {
     width: 750px;
     margin: 30px 0px 0px 96px;
     font-size: 20px;
-}
+} */
 
-img#clothes {
+/* img#clothes {
     float: right;
     margin: -320px 0px 0px 0px;
 }
 img#clothes {
     float: right;
     margin: -517px 26px 0px 0px;
+} */
+
+
+section#section{
+    /* font-family: 'Bangers', cursive; */
+    font-family: 'Crete Round', serif;
 }
+
+p#info {
+    font-size: 19px;
+}
+a#website{
+    text-decoration: none;
+    color: royalblue;
+}
+
+
+
+
+
+
+
+p#description {
+    width: 750px;
+    margin: 30px 0px 0px 119px;
+    padding: 0 0 54px 0px;
+    font-size: 20px;
+    /* border: 1px solid green; */
+    /* border-radius: 11px; */
+    text-align: justify;
+    text-justify: inter-word;
+    overflow-x: hidden;
+    width: 712px;
+    height: 249px;
+}
+img#clothes {
+    /* float: right; */
+    width: 25%;
+    /* position: absolute; */
+    margin: -168px 0px 0px 895px;
+    /* margin: -337px 26px 0px 0px; */
+    cursor: pointer;
+}
+/* .clothes-div {
+    margin-left: 66%;
+    margin-bottom: 8%;
+} */
