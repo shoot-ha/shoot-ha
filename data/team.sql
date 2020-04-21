@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS teamOne;
         stadiumImg VARCHAR(255),
         stadiumLocation VARCHAR(255),
         website VARCHAR(255),
-        teamDescription TEXT,
+        teamDescription VARCHAR(50000),
         badge VARCHAR(50000),
         logo VARCHAR(50000),
         clothes VARCHAR(50000)
