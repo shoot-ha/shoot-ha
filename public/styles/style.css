@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
-
-
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
 /* styling the search form and search page */
 
 
@@ -128,7 +127,31 @@
     margin-right:0;
     margin-bottom:0;
   } */
-  
+  .topnav {
+    display: none;
+}
+  #my-header li {
+    display: inline-block;
+    background-color: #B37A34;
+    padding: 10px;
+    margin: 9px 0 7px 10px;
+    }
+    #my-header li a {
+      text-decoration: none;
+      color: white;
+      padding: 12px;
+      margin: 9px 0px 5px 8px;
+    }
+    h2{
+      display: none;
+    }
+    ul {
+        background-color: #080808;
+        padding: 17px 0px 24px 21px;
+    }
+
+
+
   #background {
     z-index: 1;
     width: 99.5%;
@@ -233,18 +256,29 @@
   }
 
   /* The footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
+
+/* 
+  .horizantal-line {
+    border: solid;
+    border-width: 2.5px;
+} */
+
   footer {
     width: 100%;
     background-color: #1d1c1d;
-    height: 364px;
+    height: 350px;
     color: white;
     margin-top: 0%;
 }
     @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
     
-  .footer-social-links{
-    font-size: 17px;
-    text-align: center;
+  
+    .footer-social-links {
+      font-size: 17px;
+      text-align: center;
+      border-bottom: 3px solid;
+      color: whitesmoke;
+  
   }
   .footer-social-links a {
     width: 27px;
@@ -281,7 +315,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      border: 1px solid #111;
+      border: 1px solid white;
       
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
@@ -305,7 +339,8 @@
       color: #fff;
   }
   .footer-social-links a:hover:before{
-      background: #111;
+      background: #111;    
+
   }
   
   /* Names of the teams */
