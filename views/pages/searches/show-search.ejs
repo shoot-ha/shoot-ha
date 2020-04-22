@@ -7,14 +7,23 @@
     <title>Results Search</title>
     <link rel="shortcut icon" href="https://www.flaticon.com/premium-icon/icons/svg/2706/2706805.svg" />
    
-    
+    <link rel="stylesheet" href="/public/styles/reset.css">
+    <!-- <link rel="stylesheet" href="/public/styles/footer.css"> -->
+    <!-- <link rel="stylesheet" href="/public/styles/base.css"> -->
     <link rel="stylesheet" href="/public/styles/theme.css">
 
 </head>
 
 <body>
     <header>
-        <%- include ('../../layout/header') %>   
+        <nav id="my-header">
+            <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/search">Search</a></li>
+        <li> <a href="/favourite">Favourite</a></li>
+         <li> <a href="/about-us">About us</a></li>
+        </ul>
+        </nav>   
      </header>
     <main>
         <% teamSearch.forEach(result => { %>
