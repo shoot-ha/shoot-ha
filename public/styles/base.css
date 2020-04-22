@@ -131,19 +131,21 @@ img#rendImg {
     }
 
   /* The footer */
+
   footer {
     width: 100%;
-    background-color: #527114a8;
-    /* margin-top: 297px; */
+    background-color: #0e0e09c7;
     height: 340px;
-    color: black;
+    color: white;
+        margin-top: -22%;
+
 }
     @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
   
   body { background-color: #eee; }
   
   .footer-social-links{
-      font-size: 14px;
+    font-size: 14px;
     text-align: center;
     margin-top: 20%;
     border-top: solid;
@@ -157,7 +159,7 @@ img#rendImg {
     margin: 0 5px;
     text-align: center;
     display: inline-block;
-    color: #111;
+    color: white;
     -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
     -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
     -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
@@ -208,16 +210,16 @@ img#rendImg {
   
    /* Names of the teams */
     .team-1 p{
-  font-size: 20px;
-  font-family: 'Kavoon', cursive;
-  font-weight: bolder;
-  margin-left: 23px;
-    }
+      font-size: 20px;
+      font-family: 'Kavoon', cursive;
+      font-weight: bolder;
+      margin-left: 28px;
+      margin-top: 9%;    }
     .team-2 p{
       font-size: 23px;
       font-family: 'Allan', cursive;
       margin-left: 20px;
-      margin-top: 50px;
+      margin-top: 71px;
       font-weight: bolder;
       margin-bottom: 1px;
   
@@ -226,33 +228,33 @@ img#rendImg {
       font-size: 20px;
       font-weight: bolder;
       font-family: 'Peralta', cursive;
-      margin-left: 92px;
-      margin-top: -64px;
+      margin-left: 64%;
+      margin-top: -50px;
   }
   .team-4 p {
     font-size: 23px;
     font-weight: bolder;
     font-family: 'Condiment', cursive;
-    margin-left: 232px;
+    margin-left: 46%;
   }
     .team-5 p{
       font-size: 20px;
       font-weight: bolder;
       font-family: 'Lobster', cursive;
-      margin-left: 266px;
-    }
+      margin-left: 58%;
+      padding-top: 5%;    }
     .team-6 p{
       font-size: 20px;
       font-weight: bolder;
       font-family: 'New Rocker', cursive;
-      margin-left: 93px;
-      margin-top: -65px;
+      margin-left: 399px;
+      margin-top: 15px;
     }
     .team-7 p{
       font-family: 'Lakki Reddy', cursive;
       font-size: 20px;
       font-weight: bolder;
-      margin-left: 159px;
+      margin-left: 72%;
   
     }
     main img{
@@ -311,33 +313,21 @@ img#rendImg {
     background-image: url(https://coachestrainingroom.com/wp-content/uploads/2016/03/Soccer-Player-Motivational-Quotes-Luis-Suarez.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    /* width: auto ;
-    max-width: 100% ;
-    height: auto ; */
 }
 .slide:nth-of-type(2){
     background-image: url(https://coachestrainingroom.com/wp-content/uploads/2016/03/Soccer-Coaching-Training-Sessions.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    /* width: auto ;
-    max-width: 100% ;
-    height: auto ; */
 }
 .slide:nth-of-type(3){
     background-image: url(https://coachestrainingroom.com/wp-content/uploads/2016/03/Soccer-Motivation-Quotes-Lionel-Messi.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    /* width: auto ;
-    max-width: 100% ;
-    height: auto ; */
 }
 .slide:nth-of-type(4){
     background-image: url(https://coachestrainingroom.com/wp-content/uploads/2016/03/Soccer-Goalkeeper-Training-Sessions-Thierry-Henry.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    /* width: auto ;
-    max-width: 100% ;
-    height: auto ; */
     
 }
 .slide:nth-of-type(5){
@@ -350,13 +340,10 @@ img#rendImg {
   padding: 7px;
   color: white;
   font-size: 19px;
-  /* margin-left: 43%; */
-  /* width: 14%; */
   margin: 0 auto;
   margin-bottom: 9px;
 }
 p.from-render {
-  /* margin-left: -16%; */
   font-size: 21px;
   width: 86%;
   text-align: center;
@@ -369,11 +356,9 @@ img.rendered-img {
   margin: 0 auto;
   padding: 18px;
   width: 72%;
-  /* margin-top: -57px; */
 
 }
 div#container {
-  /* flex: 1; */
   display: flex;
   flex-direction: column;
 }
@@ -397,7 +382,6 @@ section div {
     font-weight: 700;
     font-size: 2em;
     text-transform: uppercase;
-    /* letter-spacing: 0.5em; */
     letter-spacing: 3.2px;
     margin-left: 5%;
     color: white;
@@ -407,7 +391,6 @@ section div {
 .ml15 .word {
   display: inline-block;
   line-height: 1em;
-  /* font-family: 'Bangers', cursive; */
   font-family: 'Kaushan Script', cursive;
 
 
@@ -437,7 +420,8 @@ p.ml16.main-description.top-left {
   word-spacing: 8px;
   width: 60%;
 }
-
+main#showMain {
+  background-color: #dae8cc;}
 
 }
 
@@ -448,7 +432,7 @@ p{
     font-family: 'Racing Sans One', cursive;
 
 }
-  .topnav {
+  /* .topnav {
     overflow: hidden;
     position: relative;
     background-color: #232e0fe0;
@@ -459,7 +443,7 @@ p{
 
   }
   .topnav #myLinks {
-    display: none;
+    display:none;
   }
   .topnav a {
     color: white;
@@ -470,7 +454,6 @@ p{
     text-align: center;
   }
   .topnav a.icon {
-   /* background: black;*/
     display: block;
     position: absolute;
     right: 0;
@@ -482,11 +465,9 @@ p{
     padding-top: 2px;
   }
   .topnav a:hover {
-    /* background-color: rgb(134, 134, 134); */
     color: white;
   }
   .active {
-  /*  background-color: black;*/
     color: white;
   }
   
@@ -495,11 +476,8 @@ p{
       padding: 1%;
       color: white;
       background-color: #774f5400;
-      /* font-family: 'Rock Salt', cursive; */
       margin-top: -18px;
       font-family: 'Kaushan Script', cursive;
-
-  
   }
   
     .menu-btn__line {
@@ -513,7 +491,7 @@ p{
       padding-right: 2px;
       padding: 1px 4px 0px 12px;
       margin-left: -7px;
-    }
+    } */
     /* for dia header*/
   
     html { box-sizing: border-box 
@@ -538,9 +516,10 @@ p{
   /* The footer */
   footer {
     width: 100%;
-    background-color: #527114a8;
-    /* margin-top: 1000px; */
+    background-color: #0e0e09c7;
     height: 426px;
+    color: white;
+    margin-top: -21%;
 }
     @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
   
@@ -567,12 +546,16 @@ p{
     transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
     margin-bottom: 28px;
     margin-top: 24px;
+    color: white;
+
   }
   .footer-social-links a i,
   .footer-social-links a span{
       position: relative;
       top: 2px;
       left: 1px; 
+      color: white;
+
   }
   .footer-social-links a:before{
       content: "";
@@ -600,6 +583,7 @@ p{
       -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
       transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
       
+      
   }
   .footer-social-links a:hover{
       color: #fff;
@@ -614,13 +598,13 @@ p{
     font-family: 'Kavoon', cursive;
     font-weight: bolder;
     margin-left: 182px;
-    margin-top: 10px;
+    margin-top: 57px;
 }
 .team-2 p {
   font-size: 30px;
   margin-left: 22%;
   font-family: 'Lakki Reddy', cursive;
-  margin-top: 50px;
+  margin-top: 73px;
   font-weight: bolder;
   margin-bottom: 1px;
 }
@@ -629,8 +613,8 @@ p{
       font-weight: bolder;
       font-family: 'Peralta', cursive;
       margin-left: 64%;
-      margin-top: -67px;
-  }
+      margin-top: -50px;
+    }
   .team-4 p {
     font-size: 30px;
     font-weight: bolder;
@@ -648,8 +632,8 @@ p{
       font-weight: bolder;
       font-family: 'New Rocker', cursive;
       margin-left: 399px;
-      margin-top: -64px;
-  }
+      margin-top: -29px;
+    }
   .team-7 p {
     font-family: 'Lakki Reddy', cursive;
     font-size: 30px;
@@ -678,7 +662,7 @@ p.main-description {
     padding: 0px;
     margin: 0px;
     list-style-type: none;
-    margin-top: 31%;
+    margin-top: 36%;
 
 }
 .slide{
@@ -779,9 +763,9 @@ section div {
   font-size: 3em;
   text-transform: uppercase;
   letter-spacing: 3.2px;
-  margin-left: 10%;
+  margin-left: 5.9%;
   color: white;
-  margin-top: -60%;
+    margin-top: -65%;
 }
 
 .ml15 .word {
@@ -807,8 +791,8 @@ section div {
   font-family: 'Kaushan Script', cursive;
 }
 p.ml16.main-description.top-left {
-    margin-left: 3%;
-    background-color: #e85a2b3b;
+  margin-left: 5%;
+  background-color: #e85a2b3b;
     margin-top: 9%;
     padding: 3%;
     word-spacing: 8px;
@@ -822,5 +806,21 @@ p.ml16.main-description.top-left {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: white;
+}
+#my-header li {
+display: inline-block;
+background-color: #0e0e09c7;
+padding: 10px;
+}
+#my-header li a {
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+
+}
+h2{
+  display: none;
+
 }
 }
