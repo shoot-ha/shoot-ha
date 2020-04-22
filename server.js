@@ -63,16 +63,16 @@ function getDataFromDB(req, res) {
   const SQL = 'SELECT * FROM teamOne;';
   return client.query(SQL)
     .then(data => {
-      res.render('./pages/searches/favourite', { result: data.rows })
+      res.render('pages/searches/favourite', { result: data.rows })
     })
 }
 
 function saveToDB(req, res) {
   let resultRows;
   let titleTeam = req.body.team;
-  let { team, formed, sport, league, stadium, stadiumImg, stadiumLocation, website, teamDescription, badge, logo, clothes } = req.body;
-  let SQL = 'INSERT INTO teamOne (team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12);';
-  let safeValues = [team, formed, sport, league, stadium, stadiumImg, stadiumLocation, website, teamDescription, badge, logo, clothes];
+  let { team, formed, sport, league, stadium, stadiumImg, stadiumLocation, website, description, badge, logo, clothes } = req.body;
+  let SQL = 'INSERT INTO teamOne (team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,description,badge,logo,clothes) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12);';
+  let safeValues = [team, formed, sport, league, stadium, stadiumImg, stadiumLocation, website, description, badge, logo, clothes];
   let safeTitle = [titleTeam];
   const SQL2 = 'SELECT * FROM teamOne WHERE team =$1;';
   client.query(SQL, safeValues)
@@ -98,17 +98,17 @@ function detailsFun(req, res) {
 
 //**************************Add New******************************* */
 
-app.get('/add/team', getForm);
-app.post('/add/team', addTeam);
+app.get('/favourite', getForm);
+app.post('/favourite', addTeam);
 
 function getForm(req, res) {
-  res.render('pages/teams/add-new');
+  res.render('pages/searches/favourite');
 }
 
 function addTeam(req, res) {
-  const { team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes } = req.body;
-  const SQL = 'INSERT INTO teamOne (team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12);';
-  const value = [team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes];
+  const { team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,description,badge,logo,clothes } = req.body;
+  const SQL = 'INSERT INTO teamOne (team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,description,badge,logo,clothes) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12);';
+  const value = [team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,description,badge,logo,clothes];
   client.query(SQL, value).then((results) => {
     res.redirect('/favourite');
   }).catch((err) => errorHandler(err, req, res));
@@ -119,10 +119,10 @@ app.put('/update/:team_id', updateTeam);
 app.delete('/delete/:team_id', deleteTeam);
 
 function updateTeam(req, res) {
-  const { team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes } = req.body;
+  const { team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,description,badge,logo,clothes } = req.body;
   const SQL =
-        'UPDATE teamOne SET team=$1,formed=$2,sport=$3,league=$4,stadium=$5,stadiumImg=$6,stadiumLocation=$7,website=$8,teamDescription=$9,badge=$10,logo=$11,clothes=$12 WHERE id=$13';
-  const values = [team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,teamDescription,badge,logo,clothes,req.params.team_id];
+        'UPDATE teamOne SET team=$1,formed=$2,sport=$3,league=$4,stadium=$5,stadiumImg=$6,stadiumLocation=$7,website=$8,description=$9,badge=$10,logo=$11,clothes=$12 WHERE id=$13';
+  const values = [team,formed,sport,league,stadium,stadiumImg,stadiumLocation,website,description,badge,logo,clothes,req.params.team_id];
   client
     .query(SQL, values)
     .then((results) => res.redirect(`/favourite/${req.params.team_id}`))
@@ -149,7 +149,7 @@ function Api1(name) {
   this.staduimImg = name.strStadiumThumb;
   this.staduimLocation = name.strStadiumLocation;
   this.website = name.strWebsite;
-  this.teamDescription = name.strDescriptionEN;
+  this.description = name.strDescriptionEN;
   this.badge = name.strTeamBadge;
   this.logo = name.strTeamLogo;
   this.clothes = name.strTeamJersey;

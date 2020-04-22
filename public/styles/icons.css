@@ -1,4 +1,269 @@
-/* @media (min-width: 320px){}
-@media (min-width:769px){} */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+@media (min-width: 320px){
+    main{
+        font-family: 'Fjalla One', sans-serif;
+    }
+    .logo{
+        width: 50px;
+        float: left;
+    }
+    .badge{
+        width: 150px;
+        float: left;
+    }
+    .clothes{
+        width: 200px;
+    }
+    /* .name{
+        float: left;
+    } */
+    #divInfo{
+        width: 400px;
+        text-align: center;
+    }
+    .website{
+        text-decoration: none;
+    }
+    .clothes{
+        float: right;
+    }
+    .badgeF{
+        width: 200px;
+    }
+    /* ///////////// */
+    .sectionF{
+    width: 270px;
+    border-radius: 1%;
+    text-align: center;
+    background-color: #9ED086;
+    color: white;
+    padding: 1%;
+    margin: 3% 1% 3% 1%;
+    background-image: url('https://image.flaticon.com/icons/svg/2793/2793131.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500px 140px;
+    background-position-y: bottom;
+    height: 416px;
+    }
+    .sectionF:hover{
+        background-image: url('https://image.flaticon.com/icons/svg/2784/2784491.svg');
+    }
+    #divF{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .teamF{
+        font-size: 150%;
+    }
+    #saveP{
+        font-size: 200%;
+        height: 150%;
+        padding-left: 3%;
+    }
+    .view-button{
+        cursor: pointer;
+        color: rgba(255, 255, 255);
+        width: 64%;
+        padding: 6%;
+        margin-top: 15%;
+        font-size: 130%;
+        background-color: rgba(8, 14, 8, 0.493);
+        font-weight: bolder;
+    }
+    .view-button:hover{
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        width: 80%;
+        padding: 2% 2% 2% 2%;
+        font-size: 180%;
+        background-color: rgba(8, 14, 8, 0.493);
+    }
+    .hide_btn{
+        width: 25.7%;
+        padding: 1.5%;
+        font-size: 140%;
+        background-color: initial;
+        color: darkslategrey;
+        font-weight: 900;
+    }
+    #submit{
+        width: 25.7%;
+        padding: 1.5%;
+        font-size: 140%;
+        background-color: black;
+        color: #9ED086;
+        font-weight: 900;
+        margin: 4% 13%;
+    }
+    input,textarea{
+        width: 50%;
+    }
+    form{
+        margin-top: 2%;
+        width: 50%;
+        text-align: center;
+        text-align: -webkit-match-parent;
+    }
+    #forFormContainer{
+        background-image: url('../images/hiclipart.com\ \(2\).png');
+        background-size: unset;
+        background-repeat: no-repeat;
+        background-position: -5px;
+        text-align: right;
+        margin-bottom: 2%;
+    }
+    #forForm{
+        text-align: right;
+        width: 100%;
+        align-content: start;
+        text-align: -webkit-right;
+    }
+    #saveD{
+        padding: 5% 0% 5% 0%;
+        width: 100%;
+        background-image: url('../images/hiclipart.com\ \(3\).png');
+        background-size: unset;
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+}
 
 
+
+
+
+@media (min-width:769px){
+    main{
+        font-family: 'Fjalla One', sans-serif;
+    }
+    .logo{
+        width: 100px;
+        float: left;
+    }
+    .badge{
+        width: 300px;
+        float: left;
+    }
+    .clothes{
+        width: 300px;
+    }
+    #divInfo{
+        width: 400px;
+        text-align: center;
+    }
+    .website{
+        text-decoration: none;
+    }
+    .clothes{
+        float: right;
+    }
+    .badgeF{
+        width: 200px;
+    }
+
+    /* //////////// */
+    
+    .sectionF{
+    width: 270px;
+    border-radius: 1%;
+    text-align: center;
+    background-color: #9ED086;
+    color: white;
+    padding: 1%;
+    margin: 1%;
+    background-image: url('https://image.flaticon.com/icons/svg/2793/2793131.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500px 143px;
+    background-position-y: bottom;
+    height: 416px;
+    box-shadow: 10px 10px 5px #91a775a6;
+    }
+    .sectionF:hover{
+        background-image: url('https://image.flaticon.com/icons/svg/2784/2784491.svg');
+    }
+    #divF{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .teamF{
+        font-size: 150%;
+    }
+    #saveP{
+        font-size: 200%;
+        height: 150%;
+        padding-left: 3%;
+    }
+    .view-button{
+        cursor: pointer;
+        color: rgba(255, 255, 255);
+        width: 64%;
+        padding: 6%;
+        margin-top: 15%;
+        font-size: 130%;
+        background-color: rgba(8, 14, 8, 0.493);
+        font-weight: bolder;
+    }
+    .view-button:hover{
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        width: 80%;
+        padding: 2% 2% 2% 2%;
+        font-size: 180%;
+        background-color: rgba(8, 14, 8, 0.493);
+    }
+    .hide_btn{
+        width: 25.7%;
+        padding: 1.5%;
+        font-size: 140%;
+        background-color: initial;
+        color: darkslategrey;
+        font-weight: 900;
+    }
+    #submit{
+        width: 25.7%;
+        padding: 1.5%;
+        font-size: 140%;
+        background-color: black;
+        color: #9ED086;
+        font-weight: 900;
+        margin: 4% 13%;
+    }
+    input,textarea{
+        width: 50%;
+    }
+    form{
+        margin-top: 2%;
+        width: 50%;
+        text-align: center;
+        text-align: -webkit-match-parent;
+    }
+    #forFormContainer{
+        background-image: url('../images/hiclipart.com\ \(2\).png');
+        background-size: unset;
+        background-repeat: no-repeat;
+        background-position: -5px;
+        text-align: right;
+        margin-bottom: 2%;
+    }
+    #forForm{
+        text-align: right;
+        width: 100%;
+        align-content: start;
+        text-align: -webkit-right;
+    }
+    #saveD{
+        padding: 5% 0% 5% 0%;
+        width: 100%;
+        background-image: url('../images/hiclipart.com\ \(3\).png');
+        background-size: unset;
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+}
