@@ -31,7 +31,9 @@
         /* background: linear-gradient(90deg, rgba(140,238,166,1) 0%, rgba(134,180,182,1) 46%, rgba(23,177,67,1) 100%); */
         box-shadow: 4px 5px 14px 10px #001a004a;
         background-color: #A69580;
+        
     }
+    
     
     img#badge {
         width: 24%;
@@ -145,6 +147,15 @@ section#section {
     box-shadow: 4px 5px 14px 10px #001a004a;
     background-color: #A69580;
 }
+body {
+    background-image: url(https://img.fifa.com/image/upload/t_tc1/jbojldmkv4fsnxsi9snc.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+
 
 img#badge {
     width: 24%;
@@ -209,14 +220,26 @@ button {
 
 body{
     /* background: linear-gradient(90deg, rgba(43,47,44,1) 0%, rgba(146,153,154,1) 51%, rgba(47,51,48,1) 100%); */
-    background-color: #D9D7B8;
+    /* background-color: #D9D7B8; */
 }
 }
 
 
 
 
-
+#my-header li {
+    display: inline-block;
+    background-color: #0e0e09c7;
+    padding: 10px;
+    }
+    #my-header li a {
+      text-decoration: none;
+      color: white;
+      padding: 15px;
+    }
+    h2{
+      display: none;
+    }
 
 
 
