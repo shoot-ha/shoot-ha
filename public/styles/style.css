@@ -22,16 +22,16 @@
   }
   
   #search {
-    top:50%;
+    top: 50%;
     position: absolute;
-    display:block;
-    z-index:3;
+    display: block;
+    z-index: 3;
     width: -webkit-fill-available;
     height: 173px;
-    margin-top: 8px;
-    margin-top: -58px;
-    margin-left: 19px;
-    margin-right: 19px;
+    /* margin-top: 8px; */
+    margin-top: -14%;
+    margin-left: 5%;
+    margin-right: 4%;
     border-radius: 20%;
        
 
@@ -50,7 +50,7 @@
     padding: 5px;
     outline: none;
     width: inherit;
-    margin-top: 30px;
+    margin-top: 10%;
     color: grey;
     left: 1;
     border-radius: 10%;
@@ -80,16 +80,16 @@
     border: 0;
     color: rgba(255,255,255,.7);
     font-family: Calibri;
-    margin-left: 100px;
+    margin-left: 34%;
     padding: 8px;
     border-radius: 5%;
     color: floralwhite;
     margin-top: -2%;
   }
-  
+/*   
   .form-wrapper button:hover {
     background-color: azure;
-  }
+  } */
   
   legend{
     font-family: monospace;
@@ -138,38 +138,38 @@
   }
   
   #search {
-    top: 65%;
+    top: 71%;
     position: absolute;
     display: block;
     z-index: 3;
-    width: 66%;
-    margin-top: 8px;
-    margin-top: -57px;
-    margin-left: 210px;
-    margin-right: 18px;
+    width: 62%;
+    /* margin-top: 8px; */
+    margin-top: -5%;
+    margin-left: 18%;
+    margin-right: 20%;
     border-radius: 14%;
        
 
   }
   
   .form-wrapper {
-    background-color:#333;
-    padding:10px;
-    width:100%;
-    padding-top:15px;
+    background-color: #333;
+    padding: 28px;
+    width: 100%;
+    padding-top: 13px;
     background: rgba(0, 0, 0, 0.82);
   }
   
   .form-wrapper input {
     border: 0;
-    padding: 5px;
+    padding: 7px;
     outline: none;
-    width: inherit;
-    margin-top: 30px;
+    width: 65%;
+    margin-top: 5%;
     color: grey;
     left: 1;
     border-radius: 10%;
-
+    margin-left: 16%;
 
   }
  
@@ -195,9 +195,9 @@
     border: 0;
     color: rgba(255,255,255,.7);
     font-family: Calibri;
-    margin-left: 100px;
-    padding: 8px;
-    border-radius: 5%;
+    margin-left: 38%;
+    padding: 13px;
+    border-radius: 6%;
     color: floralwhite;
     margin-top: -2%;
   }
@@ -207,11 +207,11 @@
   
   legend{
     font-family: monospace;
-    font-size: x-large;
+    font-size: xx-large;
     color: floralwhite;
     text-align: center;
     /* background: #3e3e3ecf; */
-    padding: 3px;
+    padding: 2px;
     font-weight: bolder;
 
   }
@@ -219,16 +219,16 @@
     width: 100%;
     float: left;
     clear: both;
-    height: 100%;
+    height: 152.5%;
     opacity: 0.8;
 
   }
-  
+
   footer {
-    width: 99.5%;
+    width: 100%;
     background-color: #2c323a47;
-    margin-top: 899px;
-    height: 434px;
+    margin-top: 74%;
+    height: 426px;
    }
     
 }
