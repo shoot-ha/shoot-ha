@@ -1,12 +1,9 @@
 
+ @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Bangers|Crete+Round&display=swap');
+
 @media (min-width: 320px){
-    
-    @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Bangers|Crete+Round&display=swap');
-    
-    
-    
-    
     section#section {
         /* font-family: 'Bangers', cursive; */
         font-family: 'Crete Round', serif;
@@ -130,22 +127,15 @@ section#section {
 
 section#section {
     text-align: center;
-    background-color: #a5b78096;
-    margin-bottom: 30px;
-    margin: 30px 0px 0px 25%;
     padding-bottom: 35px;
-    /* background-image: url(https://targetcareers.co.uk/sites/targetcareers.co.uk/files/public/styles/header_1500x550/public/field/image/football.jpg?itok=O1dRVOeD); */
-    /* background-repeat: no-repeat; */
     background: cover;
     width: 44%;
-    /* background-size: cover; */
-    /* background: rgb(173,228,66); */
-    /* background: linear-gradient(45deg, rgba(173,228,66,1) 5%, rgba(219,226,194,1) 40%, rgba(206,214,165,1) 62%, rgba(173,242,91,1) 95%); */
     border-radius: 120px;
-    /* background: radial-gradient(circle, rgb(38, 128, 62) 0%, rgb(48, 247, 137) 100%); */
-    /* background: linear-gradient(90deg, rgba(140,238,166,1) 0%, rgba(134,180,182,1) 46%, rgba(23,177,67,1) 100%); */
-    box-shadow: 4px 5px 14px 10px #001a004a;
-    background-color: #A69580;
+    box-shadow: 4px 5px 14px 10px #7584754a;
+    background-color: #fffffff5;
+    color: #020202;
+    margin: 0 auto 6%;
+    margin-top: 6%;
 }
 body {
     background-image: url(https://img.fifa.com/image/upload/t_tc1/jbojldmkv4fsnxsi9snc.jpg);
@@ -182,8 +172,10 @@ img#clothes {
 }
 
 p#info {
-    font-size: 18px;
+    font-size: 24px;
     margin: -5px 0px 13px -10px;
+    font-family: monospace;
+
 }
 a#website {
     text-decoration: none;
@@ -205,15 +197,17 @@ p#description {
     overflow-x: hidden;
     width: 65%;
     height: 156px;
+    font-family: monospace;
+
 }
 
 button {
     margin: 35px 0px 0px 0px;
-    padding: 6px 6px 6px 6px;
+    padding: 11px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     font-weight: 900;
-    background-color: #545449;
+    background-color: #ce7810;
     color: #fff;
     cursor: pointer;
 }
@@ -222,6 +216,140 @@ body{
     /* background: linear-gradient(90deg, rgba(43,47,44,1) 0%, rgba(146,153,154,1) 51%, rgba(47,51,48,1) 100%); */
     /* background-color: #D9D7B8; */
 }
+
+  /* The footer */
+  footer {
+    width: 100%;
+    background-color: #0e0e09c7;
+    height: 426px;
+    color: white;
+    margin-top: 102%;
+}
+    @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+    
+  .footer-social-links{
+    font-size: 17px;
+    text-align: center;
+  }
+  .footer-social-links a {
+    width: 27px;
+    height: 27px;
+    line-height: 27px !important;
+    position: relative;
+    margin: 0 5px;
+    text-align: center;
+    display: inline-block;
+    color: #111;
+    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    margin-bottom: 28px;
+    margin-top: 24px;
+    color: white;
+
+  }
+  .footer-social-links a i,
+  .footer-social-links a span{
+      position: relative;
+      top: 2px;
+      left: 1px; 
+      color: white;
+
+  }
+  .footer-social-links a:before{
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #111;
+      
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      
+      -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+      -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+      -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+      -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+      transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+      
+      
+  }
+  .footer-social-links a:hover{
+      color: #fff;
+  }
+  .footer-social-links a:hover:before{
+      background: #111;
+  }
+  
+  /* Names of the teams */
+  .team-1 p {
+    font-size: 30px;
+    font-family: 'Kavoon', cursive;
+    font-weight: bolder;
+    margin-left: 182px;
+    margin-top: 57px;
+}
+.team-2 p {
+  font-size: 30px;
+  margin-left: 22%;
+  font-family: 'Lakki Reddy', cursive;
+  margin-top: 73px;
+  font-weight: bolder;
+  margin-bottom: 1px;
+}
+    .team-3 p {
+      font-size: 30px;
+      font-weight: bolder;
+      font-family: 'Peralta', cursive;
+      margin-left: 64%;
+      margin-top: -50px;
+    }
+  .team-4 p {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Condiment', cursive;
+    margin-left: 46%;
+}
+  .team-5 p {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Lobster', cursive;
+    margin-left: 58%;
+}
+    .team-6 p {
+      font-size: 30px;
+      font-weight: bolder;
+      font-family: 'New Rocker', cursive;
+      margin-left: 399px;
+      margin-top: -29px;
+    }
+  .team-7 p {
+    font-family: 'Lakki Reddy', cursive;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-left: 72%;
+}
+main {
+width: 100%;
+height: 1500px;
+background-image: url("/public/img/newback.jpg");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+opacity: 0.8;
+  }
 }
 
 
