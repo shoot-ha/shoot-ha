@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favourite</title>
     <!-- <link rel="stylesheet" href="../../../public/styles/footer.css"> -->
+    <link rel="stylesheet" href="../../../public/styles/reset.css">
     <link rel="stylesheet" href="../../../public/styles/icons.css">
 </head>
 
 <body>
     <header>
+        <%- include ('../../layout/header') %>
+
     </header>
     <main>
         <div id="saveD">
@@ -39,46 +42,45 @@
         </div>
         <!-- ******************************Add New Team***************************** -->
         <div id="forFormContainer">
-            <section id="forForm">
                 <form action="/favourite" method="POST" class="form-container">
-                    <!-- <label for="team">Team Name: </label> -->
+                    <label for="team">Team Name: </label>
                     <input type="text" name="team" placeholder="Team Name" class="info" required /><br>
 
-                    <!-- <label for="formed">Formed Year: </label> -->
+                    <label for="formed">Formed Year: </label>
                     <input type="text" name="formed" placeholder="Formed Year" class="info" required /><br>
 
-                    <!-- <label for="sport">Sport Type: </label> -->
+                    <label for="sport">Sport Type: </label>
                     <input type="text" name="sport" placeholder="Sport Type" class="info" /><br>
 
-                    <!-- <label for="league">League: </label> -->
+                    <label for="league">League: </label>
                     <input type="text" name="league" placeholder="League" class="info" /><br>
 
-                    <!-- <label for="staduim">Stadium: </label> -->
+                    <label for="staduim">Stadium: </label>
                     <input type="text" name="staduim" placeholder="Stadium" class="info" /><br>
 
-                    <!-- <label for="staduimImg">Stadium Picture: </label> -->
+                    <label for="staduimImg">Stadium Picture: </label>
                     <textarea name="staduimImg" placeholder="Stadium Picture" class="info"></textarea><br>
 
-                    <!-- <label for="staduimLocation">Location: </label> -->
+                    <label for="staduimLocation">Location: </label>
                     <input type="text" name="staduimLocation" placeholder="Staduim Location" class="info" /><br>
 
-                    <!-- <label for="website"> Website: </label> -->
+                    <label for="website"> Website: </label>
                     <textarea name="website" placeholder="Website (URL)" class="info"></textarea><br>
 
-                    <!-- <label for="teamDescription">Team Description: </label> -->
+                    <label for="teamDescription">Team Description: </label>
                     <textarea name="description" placeholder="Team Description" class="info"></textarea><br>
 
-                    <!-- <label for="badge">Badge: </label> -->
+                    <label for="badge">Badge: </label>
                     <textarea name="badge" placeholder="Badge (Image)" class="info"></textarea><br>
 
-                    <!-- <label for="logo">Logo: </label> -->
+                    <label for="logo">Logo: </label>
                     <textarea name="logo" placeholder="Logo (Image)" class="info"></textarea><br>
 
-                    <!-- <label for="clothes">Clothes Image: </label> -->
+                    <label for="clothes">Clothes Image: </label>
                     <textarea name="clothes" placeholder="Clothes Image" class="info"></textarea><br>
 
                     <button type="submit" id="submit">Submit</button>
-                </form></section>
+                </form>
                 <button type="submit" class="hide_btn">Add Team</button>
             
         </div>
