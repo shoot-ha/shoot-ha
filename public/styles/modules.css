@@ -115,6 +115,9 @@ body {
   @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
   @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=BenchNine&family=Courgette&display=swap');
+
 
 
 
@@ -187,6 +190,7 @@ body {
         margin-top: 6%;
         font-size: 103%;
         line-height: 100%;
+        font-family: 'Courgette', cursive;
       }
       
       img#potos {
@@ -207,19 +211,21 @@ body {
         color: #f5f5f5;
         text-align: justify;
         text-justify: inter-word;
-        /* font-family: monospace; */
         border-radius: 5px;
         box-shadow: 10px 10px 5px black;
         opacity: 0.9;
         word-spacing: 5px;
         line-height: 32px;
     }
+
       h3 {
         text-align: center;
         font-size: 2em;
         margin-bottom: 5%;
         margin-left: 3%;
         margin-top: 5%;
+        font-family: 'Courgette', cursive;
+
       }
 
 
@@ -276,21 +282,25 @@ body {
     }
     
       .flip-box-back {
-        background-color: #b4c1d0;
-    
-        color: #2c323a;
+        background-color: #86906ef0;
+        color: white;
         transform: rotateY(180deg);
         border-radius: 30%;
       }
     
-      h2#name {
+      h5.name {
         margin-top: 12%;
         font-size: 250%;
+        font-family: 'Courgette', cursive;
+
       }
-      p#description {
-        margin-top: 25%;
-        font-size: 132%;
+      p.description {
+        font-size: 20px;
         line-height: 100%;
+        width: 74%;
+        margin: 0 auto;
+        margin-top: 12%;
+        font-family: 'Courgette', cursive;
     }
       
       img#potos {
@@ -298,13 +308,12 @@ body {
         margin: 0 auto;
       }
       .content-p {
-        background-color: #295628f0;
+        background-color: #69553dc7;
         font-size: 24px;
         text-align: justify;
         margin-right: 5%;
         margin-left: 5%;
         margin-bottom: 5%;
-        border-bottom: solid #14181d;
         padding-bottom: 5%;
         padding: 58px;
         text-align: center;
@@ -312,17 +321,19 @@ body {
         color: #fff;
         text-align: justify;
         text-justify: inter-word;
-        font-family: 'Bangers', cursive;
-                border-radius: 5px;
-        box-shadow: 10px 10px 5px black;
+        border-radius: 40px;
+        box-shadow: 10px 10px 5px #00000040;
         opacity: 0.9;
+        font-family: 'BenchNine', sans-serif;
+
+        
     }
       h3 {
-        text-align: center;
-        font-size: 2em;
-        margin-bottom: 5%;
-        margin-left: 3%;
-        margin-top: 5%;
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 5%;
+    margin-left: 3%;
+    margin-top: 8%;
       }
 
       
@@ -356,8 +367,8 @@ body {
     display: none;
   }
   ul {
-      background-color: #080808;
-      padding: 17px 0px 24px 21px;
+    background-color: #514f47f7;
+    padding: 17px 0px 24px 21px;
   }
 
 
@@ -370,7 +381,7 @@ body {
   /* The footer */
   footer {
     width: 100%;
-    background-color: #000000;
+    background-color: #46453e;
     height: 426px;
     color: white;
     /* margin-top: 102%; */
@@ -491,6 +502,14 @@ body {
     font-weight: bolder;
     margin-left: 72%;
 }
+
+body {
+  background-image: url(https://i.etsystatic.com/7388389/r/il/bfce3b/1725229312/il_570xN.1725229312_etfw.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 
 
 
