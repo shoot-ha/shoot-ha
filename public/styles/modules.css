@@ -492,6 +492,13 @@ body {
     margin-left: 72%;
 }
 
+body {
+  background-image: url(https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fimages.hdqwalls.com%2Fdownload%2Fsoccer-stadium-top-view-8k-0m-1366x768.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
 
 
 }
