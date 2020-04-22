@@ -7,10 +7,10 @@ DROP TABLE IF EXISTS teamOne;
         sport VARCHAR(255),
         league VARCHAR(255),
         stadium VARCHAR(255),
-        stadiumImg VARCHAR(255),
+        stadiumImg VARCHAR(50000),
         stadiumLocation VARCHAR(255),
         website VARCHAR(255),
-        teamDescription TEXT,
+        description TEXT,
         badge VARCHAR(50000),
         logo VARCHAR(50000),
         clothes VARCHAR(50000)
