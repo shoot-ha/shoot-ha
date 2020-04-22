@@ -178,7 +178,7 @@ table {
 @media (min-width:769px){
     main{
         font-family: 'Fjalla One', sans-serif;
-        background-color: #9CD2FF;
+        background-color: #a4d894;
         padding-top: 4%;
     }
     .logo{
@@ -231,19 +231,19 @@ table {
     line-height: 1.7;
     }
     section#section {
-        background-color: #95efb1;
+        background-color: #ffe78ec7;
         width: 55%;
         margin: 0 auto;
         padding: 5%;
         border-radius: 1%;
-        box-shadow: 10px 10px 5px black;
+        box-shadow:10px 10px 5px #0000007a;
         text-align: center;
     }
     form.form-container {
         margin-top: 11%;
         margin-left: 26%;
     width: 49%;
-    background-color: aqua;
+    background-color: #d2c6a3d1;
     padding-top: 3%;
     padding-bottom: 3%;
     border-radius: 2%;
@@ -258,7 +258,7 @@ table {
         margin-left: 38%;
         padding: 2%;
         width: 24%;
-        background-color: aquamarine;
+        background-color: #80543ee0;
         cursor: pointer;
         /* border-radius: 7%; */
         /* margin: 0 auto; */
@@ -269,7 +269,8 @@ table {
         margin-top: 4%;
         margin-bottom: 4%;
         width: 20%;
-        background-color: #95efb1;
+        color: white;
+    background-color: #80543ee0;
     }
     input.info, textarea.info, label{
         margin-left: 9%;
@@ -279,7 +280,8 @@ table {
         margin-left: 40.5%;
         margin-top: 4%;
         width: 20%;
-        background-color: #95efb1;
+        color: white;
+        background-color: #80543ee0;
     }
     input.info, textarea.info {
         margin-top: 2%;
