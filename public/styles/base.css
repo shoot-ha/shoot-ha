@@ -26,8 +26,6 @@
         font-size: 20px;
         font-family: 'Racing Sans One', cursive;
         display: block;
-
-    
     }
     section#section{
     vertical-align: top;
@@ -35,24 +33,21 @@
     text-align: center;
     width: 120px;
     margin-left: 11%;
-
 }
-img#rendImg {
+/* img#rendImg {
     width: 100px;
     height: 100px;
     background-color: grey;
-
+} */
+.topnav {
+  overflow: hidden;
+  position: relative;
+  background-color: #000000b5;
+  width: 116%;
+  margin: 0 auto;
+  margin-top: -8%;
+  margin-left: -8%;
 }
-    
-    .topnav {
-    overflow: hidden;
-    position: relative;
-    background-color: #232e0fe0;
-    width: 43%;
-    margin: 0 auto;
-    margin-top: -11%;
-    margin-left: 68%;
-  }
   .topnav #myLinks {
     display: none;
   }
@@ -81,7 +76,6 @@ img#rendImg {
     color: white;
   }
   .active {
-  /*  background-color: black;*/
     color: white;
   }
   
@@ -93,8 +87,8 @@ img#rendImg {
       font-size: 16px;
       padding-top: 8%;
       padding-left: 8%;
+      margin-bottom: 7%;
 
-  
   }
   
     .menu-btn__line {
@@ -116,8 +110,9 @@ img#rendImg {
   *, *::after, *::before { box-sizing: inherit }
   
   body{
-      height: 1000px;
-      font-family: 'Rock Salt', cursive;
+    width: 129%;
+    height: 412px;
+    font-family: 'Rock Salt', cursive;
   }
   header {
     width: 100%;
@@ -141,8 +136,6 @@ img#rendImg {
 
 }
     @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
-  
-  body { background-color: #eee; }
   
   .footer-social-links{
     font-size: 14px;
@@ -281,8 +274,8 @@ img#rendImg {
     padding: 0px;
     margin: 0px;
     list-style-type: none;
-    margin-top: 155%;
-    margin-bottom: 34%;
+    margin-top: 165%;
+    margin-bottom: 75%;
 
 }
 .slide{
@@ -341,7 +334,7 @@ img#rendImg {
   color: white;
   font-size: 19px;
   margin: 0 auto;
-  margin-bottom: 9px;
+  margin-bottom: 44px;
 }
 p.from-render {
   font-size: 21px;
@@ -421,8 +414,20 @@ p.ml16.main-description.top-left {
   width: 60%;
 }
 main#showMain {
-  background-color: #dae8cc;}
-
+  background-color: #dae8cc;
+}
+#my-header li {
+  display: none;
+ 
+  }
+  .fa {
+    display: inline-block;
+    font: normal normal normal 14px/2 FontAwesome;
+    font-size: 36px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 }
 
 @media (min-width:769px){
@@ -432,74 +437,15 @@ p{
     font-family: 'Racing Sans One', cursive;
 
 }
-  /* .topnav {
-    overflow: hidden;
-    position: relative;
-    background-color: #232e0fe0;
-    width: 105%;
-    margin: 0 auto;
-    margin-top: -32px;
-    margin-left: -31px;
-
-  }
-  .topnav #myLinks {
-    display:none;
-  }
-  .topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-    text-align: center;
-  }
-  .topnav a.icon {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: -4px;
-    width: 5px;
-    height: 14px;
-    line-height: 0px;
-    padding-top: 2px;
-  }
-  .topnav a:hover {
-    color: white;
-  }
-  .active {
-    color: white;
-  }
-  
-    h2{
-      font-size: 36px;
-      padding: 1%;
-      color: white;
-      background-color: #774f5400;
-      margin-top: -18px;
-      font-family: 'Kaushan Script', cursive;
-  }
-  
-    .menu-btn__line {
-      display: block;
-      background-color: #774f5491;
-      color: gray;
-    }
-    button{
-      background: white;
-      margin: 1.5px;
-      padding-right: 2px;
-      padding: 1px 4px 0px 12px;
-      margin-left: -7px;
-    } */
     /* for dia header*/
   
-    html { box-sizing: border-box 
+    /* html { box-sizing: border-box 
     }
   *, *::after, *::before { box-sizing: inherit }
-  
+   */
   body{
       height: 1000px;
+      width: 100%;
       font-family: 'Rock Salt', cursive;
   }
   header {
@@ -662,7 +608,8 @@ p.main-description {
     padding: 0px;
     margin: 0px;
     list-style-type: none;
-    margin-top: 36%;
+    margin-top: 35%;
+
 
 }
 .slide{
@@ -765,7 +712,7 @@ section div {
   letter-spacing: 3.2px;
   margin-left: 5.9%;
   color: white;
-    margin-top: -65%;
+  margin-top: -64%;
 }
 
 .ml15 .word {
@@ -793,8 +740,8 @@ section div {
 p.ml16.main-description.top-left {
   margin-left: 5%;
   background-color: #e85a2b3b;
-    margin-top: 9%;
-    padding: 3%;
+  margin-top: 6%;
+  padding: 3%;
     word-spacing: 8px;
     width: 40%;
 }
