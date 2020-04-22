@@ -4,7 +4,7 @@
 <head>
     <link rel="shortcut icon" href="https://www.flaticon.com/premium-icon/icons/svg/1950/1950004.svg" />
     <title>Details Team</title>
-    <link rel="stylesheet" href="../../../public/styles/icons.css">
+    <link rel="stylesheet" href="../../../public/styles/details.css">
 </head>
 
 <body id="body">
@@ -12,21 +12,25 @@
     </header>
     <main>
         <section id="section">
-            
+
             <img class="badge" src="<%= data.badge%>">
             <img class="clothes" src="<%= data.clothes%>">
             <div id="divInfo">
                 <div>
                     <img class="logo" src="<%= data.logo %>">
-                    <p class="name"><%= data.team %></p>
                 </div>
-                <p class="formed"><%= data.formed%></p>
-                <p class="sport"><%= data.sport%></p>
-                <p class="league"><%= data.league %></p>
-                <p class="stadium"><%= data.stadium%></p>
-                <p class="stadiumLocation"><%= data.stadiumLocation%></p>
-                <p><a class="website" href="http://<%=data.website%>" target="_blank"> <%= data.team %> Website </a></p>
-                <p class="description"><%= data.description%></p>
+                <section id="secInfo">
+                    <p class="name"><%= data.team %></p>
+                    <p class="formed"><%= data.formed%></p>
+                    <p class="sport"><%= data.sport%></p>
+                    <p class="league"><%= data.league %></p>
+                    <p class="stadium"><%= data.stadium%></p>
+                    <p class="stadiumLocation"><%= data.stadiumLocation%></p>
+                    <p><a class="website" href="http://<%=data.website%>" target="_blank"> <%= data.team %> Website </a>
+                    </p>
+                </section>
+                    <p class="description"><%= data.description%></p>
+                
             </div>
             <img class="stadiumImg" src="<%= data.stadiumImg%>">
         </section>
@@ -34,47 +38,49 @@
 
 
         <form action="/update/<%= data.id%>?_method=put" method="post" class="form-container">
-            <label for="team">Team Name: </label>
+            <label for="team">Team Name: </label><br>
             <input type="text" name="team" value="<%= data.team%>" class="info" /><br>
 
-            <label for="formed">Formed Year: </label>
+            <label for="formed">Formed Year: </label><br>
             <input type="text" name="formed" value="<%= data.formed%>" class="info" /><br>
 
-            <label for="sport">Sport Type: </label>
+            <label for="sport">Sport Type: </label><br>
             <input type="text" name="sport" value="<%= data.sport%>" class="info" /><br>
 
-            <label for="league">League: </label>
+            <label for="league">League: </label><br>
             <input type="text" name="league" value="<%= data.league %>" class="info" /><br>
 
-            <label for="staduim">Stadium: </label>
-            <input type="text" name="staduim" value="<%= data.staduim%>" class="info" /><br>
+            <!-- <label for="staduim">Stadium: </label> -->
+            <input type="text" name="staduim" value="<%= data.staduim%>" class="info" style="display: none;" /><br>
 
-            <label for="staduimImg">Stadium Picture: </label>
-            <input type="text" name="staduimImg" value="<%= data.staduimImg%>" class="info" /><br>
+            <!-- <label for="staduimImg">Stadium Picture: </label> -->
+            <input type="text" name="staduimImg" value="<%= data.staduimImg%>" class="info"
+                style="display: none;" /><br>
 
-            <label for="staduimLocation">Location: </label>
-            <input type="text" name="staduimLocation" value="<%= data.staduimLocation%>" class="info" /><br>
+            <!-- <label for="staduimLocation">Location: </label> -->
+            <input type="text" name="staduimLocation" value="<%= data.staduimLocation%>" class="info"
+                style="display: none;" /><br>
 
-            <label for="website"><%= data.team%> Website: </label>
+            <label for="website"><%= data.team%> Website: </label><br>
             <input type="text" name="website" value="<%= data.website%>" class="info" /><br>
 
-            <label for="description">Team Description: </label>
-            <textarea name="description" class="info" ><%= data.description%></textarea><br>
+            <label for="description">Team Description: </label><br>
+            <textarea name="description" class="info"><%= data.description%></textarea><br>
 
-            <label for="badge">Badge: </label>
+            <label for="badge">Badge: </label><br>
             <input type="text" name="badge" value="<%= data.badge%>" class="info" /><br>
 
-            <label for="logo">Logo: </label>
+            <label for="logo">Logo: </label><br>
             <input type="text" name="logo" value="<%= data.logo%>" class="info" /><br>
 
-            <!-- <label for="clothes"></label> -->
-            <input type="text" name="clothes" value="<%= data.clothes%>" class="info" style="display: none;" /><br>
+            <label for="clothes">Uniform: </label><br>
+            <input type="text" name="clothes" value="<%= data.clothes%>" class="info" /><br>
 
-            <button type="submit">SAVE</button>
+            <button id="saveBtn" type="submit">SAVE</button>
         </form>
         <button type="submit" class="hide_btn">UPDATE THIS TEAM</button>
         <form action="/delete/<%=data.id%>?_method=DELETE" method="post">
-            <button>DELETE THIS TEAM</button></form>
+            <button id="delete">DELETE THIS TEAM</button></form>
 
     </main>
     <footer>
@@ -96,6 +102,7 @@
             $('.form-container').hide();
             $('.hide_btn').on('click', function () {
                 $('.form-container').toggle();
+                $('.hide_btn').hide();
             });
         });
 
